@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Movie | Mude</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="images/logo-white.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+	<section class="px-0" id="nav"></section>
+	<div id="modal-section"></div>
+	<section id="load-page-box"></section>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<!-- 16:9 aspect ratio -->
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always">></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="d-none">
+		<div class="container-fluid px-0 py-0 mt-md-0 mt-5 bg-dark">
+			<div class="row mx-0 my-0 px-0 py-2 bg-dark d-md-block d-none">
+				<a class="mx-2 my-0 px-0 py-0 text-danger-light hover-dark text-uppercase" href="index.html">Home</a>
+				&gt;
+				<a class="mx-2 my-0 px-0 py-0 text-danger-light hover-dark text-uppercase" href="franchise.html">Marvel Cinematic Universe</a>
+				&gt;
+				<a class="mx-2 my-0 px-0 py-0 text-uppercase hover-none">Black Panther</a>
+			</div>
+			<div class="row mx-0 my-0 px-2 py-2 bg-dark">
+				<!-- Left -->
+				<div class="col-xl-3 col-4 mx-0 my-0 px-0 py-0 d-lg-block d-none">
+					<div class="col-12 mx-0 my-0 px-0 py-0 panel" id="left-pane">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-4 mx-0 my-0 px-2 py-2 text-uppercase text-center list bat active" style="cursor: pointer;" id="in-theater">
+								<b>In</b>
+								<br />
+								<b>Theaters</b>
+							</div>
+							<div class="col-5 mx-0 my-0 px-2 py-2 text-uppercase text-center list bat" style="cursor: pointer;" id="dvd-stream">
+								<b>Dvd & Streaming</b>
+							</div>
+							<div class="col-3 mx-0 my-0 px-2 py-2 text-uppercase text-center list bat" style="cursor: pointer;" id="tv-show">
+								<b>TV</b>
+								<br />
+								<b>Shows</b>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-0 py-0" id="lp-body">
+							<div class="col-12 mx-0 my-0 px-2 py-2">
+								<div class="mx-0 my-0 px-0 py-3" id="lp-body-first">
+									<b class="text-uppercase">Opening</b>
+								</div>
+								<div class="mx-3 px-0 py-0">
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 gold">
+													M
+												</h3>
+												<b class="my-0">78%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Death Wish
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												Mar 2
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 px-0 py-0">
+												<h3 class="my-0 silver">
+													M
+												</h3>
+												<b class="my-0">78%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Thor: Ragnarok
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												Mar 5
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 bronze">
+													M
+												</h3>
+												<b class="my-0">58%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Divorce
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												Mar 3
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 bronze">
+													M
+												</h3>
+												<b class="my-0">51%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Black Panther
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												Feb 16
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 gold">
+													M
+												</h3>
+												<b class="my-0">81%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Victoria
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												Mar 2
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col text-right px-0">
+									<a href="browse.html" class="mr-auto hover-blue">View All ></a>
+								</div>
+							</div>
+							
+							<div class="col-12 mx-0 my-0 px-2 py-2">
+								<div class="mx-0 my-0 px-0 py-3">
+									<b class="text-uppercase">Top Box Office</b>
+								</div>
+								<div class="mx-0 px-0 py-0">
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row mx-0 my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 gold">
+													M
+												</h3>
+												<b class="my-0">78%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Black Panther
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												$201.8M
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row mx-0 my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 silver">
+													M
+												</h3>
+												<b class="my-0">82%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Peter Rabbit
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												$17.6M
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row mx-0 my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 bronze">
+													M
+												</h3>
+												<b class="my-0">58%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Fifty Shades Freed
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												$17.4M
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row mx-0 my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 bronze">
+													M
+												</h3>
+												<b class="my-0">53%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Jumanji: Welcome to the Jungle
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												$8M
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row mx-0 my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 black">
+													M
+												</h3>
+												<b class="my-0">31%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												The 15:17 to Paris
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												$7.7M
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col text-right px-0">
+									<a href="browse.html" class="mr-auto hover-blue">View All ></a>
+								</div>
+							</div>
+							
+							<div class="col-12 mx-0 my-0 px-2 py-2">
+								<div class="mx-0 my-0 px-0 py-3">
+									<b class="text-uppercase">Coming Soon</b>
+								</div>
+								<div class="mx-3 px-0 py-0">
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 px-0 py-0">
+												<h3 class="my-0 silver">
+													M
+												</h3>
+												<b class="my-0">78%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Thor: Ragnarok
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												Mar 5
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 bronze">
+													M
+												</h3>
+												<b class="my-0">58%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Divorce
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												Mar 3
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 bronze">
+													M
+												</h3>
+												<b class="my-0">51%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Black Panther
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												Feb 16
+											</div>
+										</div>
+									</a>
+									<a href="movies-detail.html" style="text-decoration: none;">
+										<div class="row my-0 pt-1 hover-table">
+											<div class="col-4 row mx-0 my-0 px-0 py-0">
+												<h3 class="my-0 gold">
+													M
+												</h3>
+												<b class="my-0">81%</b>
+											</div>
+											<div class="col-5 px-0 py-0 text-center text-truncate">
+												Victoria
+											</div>
+											<div class="col-3 px-0 py-0 text-right">
+												Mar 2
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col text-right px-0">
+									<a href="browse.html" class="mr-auto hover-blue">View All ></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Advertisement -->
+					<div class="col-12 mx-0 my-0 px-0 py-0">
+						<div class="mx-0 my-0 px-md-0 px-sm-3 py-0 text-center">
+							<div class="mx-0 my-4 px-md-0 px-sm-5 py-0 text-center">
+								<a class="mx-0 my-0 px-0 py-0">
+									<img id="ad3" src="images/ad-3.png" style="width:70%;">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Right -->
+				<div class="col-xl-9 col-lg-8 col-12 mx-0 my-0 pl-lg-4 pl-0 pr-0 py-0">
+					<div class="col-12 mx-0 my-0 px-0 py-0" style="overflow: hidden !important;" id="top-image">
+						<a class="mx-0 my-0 px-0 py-0 hover-none trailer-link video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/xjDjIWPwcPU" data-target="#myModal" href="#">
+							<div class="card trailer">
+								<img class="card-img-top" src="images/h1.jpg" alt="Card image cap">
+								<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+									<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+										<div class="mr-auto mt-auto px-3 py-3 text-left">
+											<h4 class="mb-3">
+												<span class="badge badge-danger px-3 py-2" style="opacity:0.8; font-family:'Lovelo Black';">Trailer</span>
+											</h4>
+											<h2 class="my-0 py-0">Black Panther<small> (2018)</small></h2>
+											<div class="col-9 mx-0 my-0 px-0 py-0 trailer-text" id="trailer-info-box">
+												<p class="my-0 py-xl-4 py-3 text-uppercase d-sm-block d-none">
+													After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king.
+												</p>
+												<h1 class="my-0 py-xl-2 py-1" style="font-family:'Lovelo Black';">
+													<span class="badge badge-danger pl-3 pr-4 py-2 my-sm-0 mt-3 mb-0" style="opacity:0.8;">Click to Play</span>
+												</h1>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="row mx-0 my-2 px-lg-3 px-1 py-1 bg-black rounded" id="franchise-box">
+						<p class="mt-3 text-uppercase d-sm-block d-none">Part of the Franchise: <b><em class="text-danger-light">Marvel Cinematic Universe</em></b></p>
+						<p class="my-0 py-2 text-uppercase d-sm-none d-block mx-auto small">View the Franchise: <a href="franchise.html" class="mx-0 my-0 px-0 py-0 hover-dark"><b>
+							<em class="text-danger-light">Marvel Cinematic Universe</em>
+						</b></a></p>
+						<a class="btn btn-outline-light ml-auto my-auto d-sm-block d-none" id="viewCollectionButton" href="franchise.html">View Franchise</a>
+					</div>
+					<div class="row mx-0 my-2 px-0 py-0" id="poster-meter-box">
+						<div class="col-xl-3 col-lg-4 col-md-3 col-4 mx-0 my-0 pl-0 pr-2 py-0">
+							<a class="hover-none mx-0 my-0 px-0 py-0">
+								<img class="img-fluid" src="images/tv3.jpg" id="poster">
+							</a>
+						</div>
+						<div class="col-xl-9 col-lg-8 col-md-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+							<div class="row mx-0 my-0 px-0 py-0 bg-black-light meter-box">
+								<div class="col-xl-8 col-lg-6 col-md-8 col-6 mx-0 my-0 px-0 py-0 border-right border-dark">
+									<div class="row mx-0 my-0 px-0 py-2">
+										<div class="col-xl-6 col-lg-12 col-md-6 col-12 mx-0 my-0 px-0 py-0 text-center">
+											<h6 class="my-0 d-md-block d-none">MudeMeter 
+												<i class="fas fa-question-circle" data-toggle="tooltip" 
+												data-placement="left" title="The percentage of Mudemeter critics who have given this media a positive review."></i>
+											</h6>
+											<p class="my-0 py-0 d-md-none d-block text-uppercase">MudeMeter
+												<i class="fas fa-question-circle my-0 py-0 d-sm-inline d-none" data-toggle="tooltip" data-placement="left" title="The percentage of Mudemeter 
+												critics who have given this media a positive review."></i>
+											</p>
+											<div class="row mx-0 my-0 px-0 py-md-2 py-3" id="mudemeter">
+												<h1 class="ml-auto my-0 py-0 gold">M</h1>
+												<h3 class="ml-1 mr-auto my-auto py-0">98%</h3>
+											</div>
+											<div class="mx-0 my-0 px-0 py-1 d-md-block d-none">
+												<p class="my-md-2 my-0">Average Score: <b class="text-danger-light">8.2/10</b></p>
+												<p class="my-md-2 my-0">Reviews Counted: <b class="text-danger-light">364</b></p>
+												<p class="my-md-2 my-0 d-xl-block d-none">
+													Oranizations Counted:
+													<b class="text-danger-light">300</b>
+												</p>
+												<p class="my-md-2 my-0">Gold Mude:
+													<b class="text-danger-light">353</b>
+												</p>
+												<p class="my-md-2 my-0">Silver Mude:
+													<b class="text-danger-light">10</b>
+												</p>
+												<p class="my-md-2 my-0">Bronze Mude:
+													<b class="text-danger-light">20</b>
+												</p>
+												<p class="my-md-2 my-0">Burnt Mude:
+													<b class="text-danger-light">2</b>
+												</p>
+												<p class="my-md-2 my-0 d-xl-block d-none">Box Office:
+													<b class="text-danger-light">$201.8M</b>
+												</p>
+											</div>
+										</div>
+										<div class="col-xl-6 col-lg-12 col-6 mx-0 my-0 px-0 py-0 d-xl-block d-lg-none d-md-block d-none text-center" style="overflow:scroll;">
+											<div class="row mx-0 my-0 px-0 py-0 text-uppercase">
+												<a class="hover-blue ml-auto mr-2 px-0 my-0 py-0 small" href="critics.html">
+													<b>Critics</b>
+												</a>
+												<a class="hover-blue ml-2 mr-auto px-0 my-0 py-0 small" href="critics.html">
+													Audiences
+												</a>
+											</div>
+											<div class="progress mx-3 mt-3 mb-2 px-0 py-0" style="height:27%; border-radius:25px;">
+												<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="98" aria-valuemin="0"
+												 aria-valuemax="100" style="width: 98%;"></div>
+											</div>
+											<div class="mx-0 my-0 px-2 py-0">
+												<p class="my-0 py-0" id="consensus-big"><b>Critics Consensus</b>: <span>Black Panther elevates superhero cinema to 
+												thrilling new heights while telling one of the MCU's most absorbing
+												stories -- and introducing some of its most fully realized characters.</span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-4 col-lg-6 col-md-4 col-6 mx-0 my-0 px-0 py-0 text-center border-left border-dark">
+									<div class="row mx-0 my-0 px-0 py-2">
+										<div class="col-12 mx-0 my-0 px-0 py-0 text-center">
+											<h6 class="my-0 d-md-block d-none">User Score
+												<i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="The 
+												percentage of users who have reviewed this movie with 3.5 stars or higher."></i>
+											</h6>
+											<p class="my-0 py-0 d-md-none d-block text-uppercase d-md-none d-block">User Score
+												<i class="fas fa-question-circle my-0 py-0 d-sm-inline d-none" data-toggle="tooltip" 
+												data-placement="left" title="The percentage of users who have reviewed this movie with 3.5 stars or higher."></i>
+											</p>
+											<div class="row mx-0 my-0 px-0 py-md-2 py-3" id="user-score">
+												<h1 class="ml-auto my-0 py-0 neon">M</h1>
+												<h3 class="ml-1 mr-auto my-auto py-0">100%</h3>
+											</div>
+											<div class="mx-0 my-0 px-0 py-1 d-md-block d-none">
+												<p class="my-md-2 my-0">Average Score:
+													<b class="text-danger-light">4.1/5</b>
+												</p>
+												<p class="my-md-2 my-0">User Reviews:
+													<b class="text-danger-light">72820</b>
+												</p>
+
+												<p class="my-md-2 my-0 d-xl-block d-none">Want To See List Count:
+													<b class="text-danger-light">200</b>
+												</p>
+												<p class="my-md-2 my-0 d-xl-block d-none">Not Intersted List Count:
+													<b class="text-danger-light">2</b>
+												</p>
+												<p class="my-md-2 my-0">Gold Mude:
+													<b class="text-danger-light">353</b>
+												</p>
+												<p class="my-md-2 my-0">Silver Mude:
+													<b class="text-danger-light">10</b>
+												</p>
+												<p class="my-md-2 my-0">Bronze Mude:
+													<b class="text-danger-light">20</b>
+												</p>
+												<p class="my-md-2 my-0">Burnt Mude:
+													<b class="text-danger-light">2</b>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mx-0 my-0 px-0 py-2 bg-black-light d-md-none d-block meter-box">
+								<div class="mx-0 my-0 px-1 py-0">
+									<p class="my-0 py-0 xs-text text-center" id="consensus-small">
+										<b>Critics Consensus</b>: <span>Black Panther elevates superhero cinema to thrilling new heights while telling one of the MCU's
+										most absorbing stories -- and introducing some of its most fully realized characters.</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mx-0 my-0 px-0 py-0 d-md-block d-none" id="review-box-big">
+						<div class="mx-0 my-lg-3 my-2 px-0 py-0">
+							<h6 class="py-0 my-0">Add Your Review</h6>
+						</div>
+						<div class="mx-0 my-0 px-0 py-0" style="display: flex;">
+							<div class="col-2 mx-0 my-0 px-0 py-0 text-center" style="min-height: 100%;">
+								<img src="images/critics.gif" class="rounded-circle" style="width:90%;">
+							</div>
+							<div class="col-10 mx-0 my-0 px-1 py-0" style="min-height: 100%;">
+								<div class="row mx-0 my-0 px-0 py-0">
+									<div class="mx-0 my-auto px-2 py-0">
+										<button class="btn btn-outline-primary col-12 text-uppercase d-xl-none d-lg-block d-md-none d-block">
+											<small>Want to See</small>
+										</button>
+										<button class="btn btn-outline-primary col-12 text-uppercase d-xl-block d-lg-none d-md-block d-none">
+											<h6 class="ml-1 mt-2">Want to See</h6>
+										</button>
+									</div>
+									<div class="mx-0 my-auto px-2 py-0">
+										<button class="btn btn-outline-danger col-12 text-uppercase d-xl-none d-lg-block d-md-none d-block">
+											<small>Not Intersted</small>
+										</button>
+										<button class="btn btn-outline-danger col-12 text-uppercase d-xl-block d-lg-none d-md-block d-none">
+											<h6 class="ml-1 mt-2">Not Intersted</h6>
+										</button>
+									</div>
+									<fieldset class="ml-auto mt-0 mb-0 pt-2 pb-0 rating">
+										<input type="radio" id="star5" name="rating" value="5" />
+										<label class="full" for="star5" title="Hell-Ya! - 5 stars" style="cursor: pointer;"></label>
+										<input type="radio" id="star4half" name="rating" value="4 and a half" />
+										<label class="half" for="star4half" title="Very Good - 4.5 stars" style="cursor: pointer;"></label>
+										<input type="radio" id="star4" name="rating" value="4" />
+										<label class="full" for="star4" title="Pretty good - 4 stars" style="cursor: pointer;"></label>
+										<input type="radio" id="star3half" name="rating" value="3 and a half" />
+										<label class="half" for="star3half" title="Not bad - 3.5 stars" style="cursor: pointer;"></label>
+										<input type="radio" id="star3" name="rating" value="3"/>
+										<label class="full" for="star3" title="So-so - 3 stars" style="cursor: pointer;"></label>
+										<input type="radio" id="star2half" name="rating" value="2 and a half" />
+										<label class="half" for="star2half" title="Kinda bad - 2.5 stars" style="cursor: pointer;"></label>
+										<input type="radio" id="star2" name="rating" value="2" />
+										<label class="full" for="star2" title="Bad - 2 stars" style="cursor: pointer;"></label>
+										<input type="radio" id="star1half" name="rating" value="1 and a half" />
+										<label class="half" for="star1half" title="Meh - 1.5 stars" style="cursor: pointer;"></label>
+										<input type="radio" id="star1" name="rating" value="1" />
+										<label class="full" for="star1" title="Sucks - 1 star" style="cursor: pointer;"></label>
+										<input type="radio" id="starhalf" name="rating" value=".5" />
+										<label class="half" for="starhalf" title="Yuk! - 0.5 stars" style="cursor: pointer;"></label>
+									</fieldset>
+								</div>
+								<div class="mx-0 my-0 px-2 py-0">
+									<textarea placeholder="Add a Review" style="width: 100%; height: 6.2rem; z-index: auto; position: relative; line-height: normal; font-size: 16px; transition: none; background: transparent !important; color: white;"
+									 spellcheck="true"></textarea>
+								</div>
+								<div class="row mx-0 my-0 px-2 py-3">
+									<a class="ml-auto btn btn-outline-light" href="#">Post</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mx-0 mt-3 mb-0 px-0 py-0 d-md-none d-flex w-100" id="review-box-small">
+						<div class="col-4 mx-0 my-0 px-2 py-2 text-center panel text-uppercase text-primary wts-box" style="cursor: pointer;">
+							<p class="my-0 text-primary"><i class="fas fa-plus fa-2x"></i></p>
+							Want To See
+						</div>
+						<div class="col-4 mx-0 my-0 px-2 py-2 text-center text-uppercase text-danger ni-box" style="border-top: 1px solid rgba(255, 255, 255, .5); border-bottom: 1px solid rgba(255, 255, 255, .5); cursor: pointer;">
+							<p class="my-0 text-danger">
+								<i class="fas fa-times fa-2x"></i></i>
+							</p>
+							Not Intersted
+						</div>
+						<div class="col-4 mx-0 my-0 px-2 py-2 text-center panel text-uppercase text-warning add-box" style="cursor: pointer;">
+							<p class="my-0 text-warning">
+								<i class="fas fa-star fa-2x"></i>
+								</i>
+							</p>
+							Add Review
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-block d-none">
+						Videos
+					</h4>
+					<h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-none d-block">
+						Videos
+					</h5>
+				</div>
+			</div>
+			
+			<div class="details owl-carousel owl-theme mx-0 mt-3 mb-0 px-0 pt-3 pb-0" style="z-index:0;">
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr2.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">01:56</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<span class="mx-0 my-0">Doctor Strange: Trailer 2</span>
+					</div>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top  rounded-0" src="images/tr1.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">11:56</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<span class="mx-0 my-0">DeadPool: Trailer 1</span>
+					</div>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top  rounded-0" src="images/tr3.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">02:56</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<span class="mx-0 my-0">Spiderman: Trailer 5</span>
+					</div>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top  rounded-0" src="images/tr4.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">00:56</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<span class="mx-0 my-0">Thor Ragnarok: Teaser 1</span>
+					</div>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top  rounded-0" src="images/tr1.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">00:05</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<span class="mx-0 my-0">DeadPool: Trailer 1</span>
+					</div>
+				</div>
+			</div>
+			<div class="col text-right px-2 my-sm-0 mt-3 mb-0">
+				<a href="browse.html" class="mr-auto text-danger-light hover-dark">
+					<b>View All Videos&#8195;(36)</b>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark" id="photo-box">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-block d-none">
+						Photos
+					</h4>
+					<h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-none d-block">
+						Photos
+					</h5>
+				</div>
+			</div>
+			
+			<div class="details owl-carousel owl-theme mx-0 mt-3 mb-0 px-0 pt-3 pb-0" style="z-index:0;">
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/h1.jpg" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top  rounded-0" src="images/tr4.png" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top  rounded-0" src="images/tr2.png" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top  rounded-0" src="images/tr1.png" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top  rounded-0" src="images/tr3.png" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col text-right px-2 my-sm-0 mt-3 mb-0">
+				<a href="browse.html" class="mr-auto text-danger-light hover-dark">
+					<b>View All Photos&#8195;(20)</b>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-block d-none">
+						Movie Info
+					</h4>
+					<h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-none d-block">
+						Movie Info
+					</h5>
+				</div>
+			</div>
+			
+			<div class="col-12 mx-0 my-0 px-lg-5 px-md-3 px-2 py-lg-5 py-3 info-box">
+				"Black Panther" follows T'Challa who, after the events of "Captain America: Civil War," returns home to the isolated, technologically
+				advanced African nation of Wakanda to take his place as King. However, when an old enemy reappears on the radar, T'Challa's
+				mettle as King and Black Panther is tested when he is drawn into a conflict that puts the entire fate of Wakanda and the
+				world at risk.
+			</div>
+			
+			<div class="row mx-0 my-0 px-2 pt-0 pb-lg-5 pb-3">
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Rating</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					PG-13 (for prolonged sequences of action violence, and a brief rude gesture)
+				</div>
+			
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Genre</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					<a href="browse.html" class="text-danger-light hover-dark">Action & Adventure</a>,&#8195;
+					<a href="browse.html" class="text-danger-light hover-dark">Drama</a>,&#8195;
+					<a href="browse.html" class="text-danger-light hover-dark">Science Fiction & Fantasy</a>
+				</div>
+			
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Directed By</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					<a href="artists.html" class="text-danger-light hover-dark">Ryan Coogler</a>
+				</div>
+			
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Written By</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					<a href="artists.html" class="text-danger-light hover-dark">Joe Robert Cole</a>,&#8195;
+					<a href="artists.html" class="text-danger-light hover-dark">Ryan Coogler</a>
+				</div>
+			
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>In Theaters</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					Feb 16, 2018 Wide
+				</div>
+			
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Box Office</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					$501,105,037
+				</div>
+			
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Runtime</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					135 minutes
+				</div>
+			
+				<div class="col-3 mx-0 my-0 px-2 py-0 text-right">
+					<b>Studio</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-0">
+					<a href="franchise.html" class="text-danger-light hover-dark">Marvel Studios</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-block d-none">
+						Watch It Now
+					</h4>
+					<h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-none d-block">
+						Watch It Now
+					</h5>
+				</div>
+			</div>
+			
+			<div class="row mx-0 mt-3 mb-0 py-0 streaming">
+				<div class="col-md-3 col-6 px-md-3 px-sm-5 px-3 py-2">
+					<a class="mx-0 my-0 px-0 py-0 hover-none" href="www.amazon.com/Try-Prime-Video">
+						<img class="img-fluid" src="images/md1.jpg" />
+					</a>
+				</div>
+				<div class="col-md-3 col-6 px-md-3 px-sm-5 px-3 py-2">
+					<a class="mx-0 my-0 px-0 py-0 hover-none" href="www.amazon.com/Try-Prime-Video">
+						<img class="img-fluid" src="images/md2.png" />
+					</a>
+				</div>
+				<div class="col-md-3 col-6 px-md-3 px-sm-5 px-3 py-2">
+					<a class="mx-0 my-0 px-0 py-0 hover-none" href="www.amazon.com/Try-Prime-Video">
+						<img class="img-fluid" src="images/md3.png" />
+					</a>
+				</div>
+				<div class="col-md-3 col-6 px-md-3 px-sm-5 px-3 py-2">
+					<a class="mx-0 my-0 px-0 py-0 hover-none" href="www.amazon.com/Try-Prime-Video">
+						<img class="img-fluid" src="images/md4.png" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none" id="cast-box">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-block d-none">
+						Cast
+					</h4>
+					<h6 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-none d-block">
+						Cast
+					</h6>
+				</div>
+			</div>
+	
+			<div class="details owl-carousel owl-theme mx-0 mt-3 mb-0 px-md-0 px-sm-3 px-5 pt-3 pb-0" style="z-index:0;">
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-none" href="artists.html">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/c1.jpg" alt="Card image cap">
+						</div>
+						<div class="mx-0 my-0 px-2 py-2">
+							<h6 class="mx-0 my-0 text-danger-light">Adam Driver</h6>
+							<b class="text-light">as Kylo Ren</b>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-none" href="artists.html">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/c2.jpg" alt="Card image cap">
+						</div>
+						<div class="mx-0 my-0 px-2 py-2">
+							<h6 class="mx-0 my-0 text-danger-light">Daisey Ridley</h6>
+							<b class="text-light">as Ray</b>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-none" href="artists.html">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/c3.jpg" alt="Card image cap">
+						</div>
+						<div class="mx-0 my-0 px-2 py-2">
+							<h6 class="mx-0 my-0 text-danger-light">Daisey Ridley</h6>
+							<b class="text-light">as Ray</b>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-none" href="artists.html">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/c4.jpg" alt="Card image cap">
+						</div>
+						<div class="mx-0 my-0 px-2 py-2">
+							<h6 class="mx-0 my-0 text-danger-light">Daisey Ridley</h6>
+							<b class="text-light">as Ray</b>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-none" href="artists.html">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/c5.jpg" alt="Card image cap">
+						</div>
+						<div class="mx-0 my-0 px-2 py-2">
+							<h6 class="mx-0 my-0 text-danger-light">Mark Hamill</h6>
+							<b class="text-light">as Luke</b>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none" id="critic-review-box">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-block d-none">
+						CRITIC REVIEWS
+					</h4>
+					<h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-none d-block">
+						CRITIC REVIEWS
+					</h5>
+				</div>
+			</div>
+
+			<div class="mx-0 my-0 px-2 py-0">
+				<div class="btn-group mt-3 mb-3" role="group" aria-label="critic reviews">
+					<button type="button" class="btn btn-outline-light active border-0 rounded d-md-block d-none" style="z-index:0;">
+						<small>All</small>
+					</button>
+					<button type="button" class="btn btn-outline-light border-0 rounded d-md-block d-none">
+						<small>Gold Mude(558)</small>
+					</button>
+					<button type="button" class="btn btn-outline-light border-0 rounded d-md-block d-none">
+						<small>Silver Mude(22)</small>
+					</button>
+					<button type="button" class="btn btn-outline-light border-0 rounded d-md-block d-none">
+						<small>Bronze Mude(120)</small>
+					</button>
+					<button type="button" class="btn btn-outline-light border-0 rounded d-lg-block d-none">
+						<small>Black Mude(1)</small>
+					</button>
+				</div>
+			</div>
+			<div class="row mx-0 my-0 px-0 py-0">
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">Matthew Rozsa</a>
+									&#8195;-&#8195;
+									<a href="https://www.rottentomatoes.com/source-400" class="mx-0 my-0 px-0 py-0 hover-blue">Salon.com</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">
+							When it comes to creative visuals, engaging action and likable characters, "Black Panther" stands confidently next to the
+							best fare offered up by the Marvel Cinematic Universe.
+							<a href="https://www.salon.com/2018/02/18/black-panther-is-a-film-about-history-that-makes-history/" class="mx-0 my-0 px-0 py-0 hover-blue">
+								<b>Read Full Review</b>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">Christopher Orr</a>
+									&#8195;-&#8195;
+									<a href="https://www.rottentomatoes.com/source-400" class="mx-0 my-0 px-0 py-0 hover-blue">The Atlantic</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">
+							Whether or not this is the best film Marvel Studios has made to date-and it is clearly in the discussion-it is by far the
+							most thought-provoking.
+							<a href="https://www.salon.com/2018/02/18/black-panther-is-a-film-about-history-that-makes-history/" class="mx-0 my-0 px-0 py-0 hover-blue">
+								<b>Read Full Review</b>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">J. R. Jones</a>
+									&#8195;-&#8195;
+									<a href="https://www.rottentomatoes.com/source-400" class="mx-0 my-0 px-0 py-0 hover-blue">Chicago Reader</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">
+							 The identity politics provide a fresh spin to the genre's increasingly tedious narrative formula.
+							<a href="https://www.salon.com/2018/02/18/black-panther-is-a-film-about-history-that-makes-history/" class="mx-0 my-0 px-0 py-0 hover-blue">
+								<b>Read Full Review</b>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">Anthony Lane</a>
+									&#8195;-&#8195;
+									<a href="https://www.rottentomatoes.com/source-400" class="mx-0 my-0 px-0 py-0 hover-blue">New Yorker</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">
+							Jordan has swagger to spare, with those rolling shoulders, but there's a breath of charm, too, all the more seductive in
+							the overblown atmosphere of Marvel. He's twice as pantherish as the Panther.
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">Jason Di Rosso</a>
+									&#8195;-&#8195;
+									<a href="https://www.rottentomatoes.com/source-400" class="mx-0 my-0 px-0 py-0 hover-blue">The Hub on Screen</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">							
+							Black Panther is on another level altogether.
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">Peter Rainer</a>
+									&#8195;-&#8195;
+									<a href="https://www.rottentomatoes.com/source-400" class="mx-0 my-0 px-0 py-0 hover-blue">Christian Science Monitor</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">
+							Coogler is trying for a lot of things in Black Panther, probably too many, but there is also a winning modesty to his ambition.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col text-right px-2 my-sm-0 mt-3 mb-0">
+				<a href="reviews.html" class="mr-auto text-danger-light hover-dark">
+					<b>View All Critic Reviews (240)</b>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none" id="audience-review-box">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-block d-none">
+						Audience REVIEWS
+					</h4>
+					<h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-none d-block">
+						Audience REVIEWS
+					</h5>
+				</div>
+			</div>
+
+			<!-- For Spacing -->
+			<div class="mx-0 my-3 px-0 py-2">
+			</div>
+			<div class="row mx-0 my-0 px-0 py-0">
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">Jens S.</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">
+							 Marvel's most unusual film of its Cinematic Universe is big on world-building, empowerment, strong (female) characters and
+							jabs at the current state of the world. All that mixed with the ingredients of a blockbuster film, a great cast, good humorous
+							timing and...
+							<p class="mt-4 mb-0 pb-0 text-right">
+								<a href="https://www.salon.com/2018/02/18/black-panther-is-a-film-about-history-that-makes-history/" class="mx-0 my-0 px-0 py-0 text-danger-light hover-dark">
+									<b>More</b>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">Sanjay Rema</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">
+							When it comes to Marvel films, I put this one right up there as one of the best. It has a great villain, great visuals,
+							great performances, and a great narrative that tests the morals of every character. Coogler does a great high-wire balancing
+							act managing a complex story whil...
+							<p class="mt-4 mb-0 pb-0 text-right">
+								<a href="https://www.salon.com/2018/02/18/black-panther-is-a-film-about-history-that-makes-history/" class="mx-0 my-0 px-0 py-0 text-danger-light hover-dark">
+									<b>More</b>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">KJ Proulx</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">
+							The Marvel Cinematic Universe has now been around for nearly a decade and not only has it matured as a franchise, but it
+							has also evolved into something worth holding onto for generations to come. Sure, there are a few weak entries, but I don't
+							think of this franchis...
+							<p class="mt-4 mb-0 pb-0 text-right">
+								<a href="https://www.salon.com/2018/02/18/black-panther-is-a-film-about-history-that-makes-history/" class="mx-0 my-0 px-0 py-0 text-danger-light hover-dark">
+									<b>More</b>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-0 review-box" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-md-4 col-sm-3 col-4 mx-0 my-0 px-2 py-0 text-center">
+								<img src="images/critics.gif" class="rounded-circle img-fluid" />
+							</div>
+							<div class="col-md-8 col-sm-9 col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<p class="my-0" style="font-size:1.2rem;">
+									<a href="critics-detail.html" class="mx-0 mt-2 mb-0 px-0 py-0 hover-blue">Nate Zoebl</a>
+								</p>
+								<div class="row mx-0 my-0 px-0 py-1">
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<i class="icon-star my-auto text-warning"></i>
+									<span class="ml-1 my-auto text-warning">5</span>
+								</div>
+								<p class="text-muted py-0 my-0">February 19, 2018</p>
+							</div>
+						</div>
+						<div class="col-12 mx-0 my-0 px-2 py-2 text-center">
+							Black Panther is unlike any other Marvel Cinematic Universe (MCU) film prior. It's unlike any other super hero film prior.
+							Yes, there have been African-American leading men in comic-based movies, notably Wesley Snipes' half-vampire-all-badass Blade.
+							However, this is th...
+							<p class="mt-4 mb-0 pb-0 text-right">
+								<a href="https://www.salon.com/2018/02/18/black-panther-is-a-film-about-history-that-makes-history/" class="mx-0 my-0 px-0 py-0 text-danger-light hover-dark">
+									<b>More</b>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col text-right px-2 my-sm-0 mt-3 mb-0">
+				<a href="reviews.html" class="mr-auto text-danger-light hover-dark">
+					<b>View All Audience Reviews (240)</b>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark" id="quote-box">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-block d-none">
+						Qutoes
+					</h4>
+					<h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-none d-block">
+						Qutoes
+					</h5>
+				</div>
+			</div>
+
+			<div class="row mx-0 mt-3 mb-0 px-0 pt-0 pb-5">
+				<div class="col-sm-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-2 bg-black" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-3 mx-0 my-0 pl-0 pr-2 py-0 text-right">
+								<b class="text-danger-light">Shuri</b>:
+							</div>
+							<div class="col-9 mx-0 my-0 pl-0 pr-2 py-0">
+								Did he freeze?
+							</div>
+							<div class="col-3 mx-0 my-0 pl-0 pr-2 py-0 text-right">
+								<b class="text-danger-light">Okoye</b>:
+							</div>
+							<div class="col-9 mx-0 my-0 pl-0 pr-2 py-0">
+								 Like an antelope in headlights.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-2 bg-black" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-3 mx-0 my-0 pl-0 pr-2 py-0 text-right">
+								<b class="text-danger-light">T'Challa</b>:
+							</div>
+							<div class="col-9 mx-0 my-0 pl-0 pr-2 py-0">
+								We can still heal you..
+							</div>
+							<div class="col-3 mx-0 my-0 pl-0 pr-2 py-0 text-right">
+								<b class="text-danger-light">Erik Killmonger</b>:
+							</div>
+							<div class="col-9 mx-0 my-0 pl-0 pr-2 py-0">
+								Why, so you can lock me up? Nah. Just bury me in the ocean with my ancestors who jumped from ships, 'cause they knew death
+								was better than bondage.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="bottom-ad" class="d-none"></section>
+	
+	<footer class="px-0 d-none">
+	</footer>
+	
+	<script src="jquery/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<script src="js/details.js"></script>
+</body>
+</html>

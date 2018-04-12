@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Brijesh Patel | Mude</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="images/logo-white.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/users.css">
+</head>
+<body>
+    <section class="px-0 d-none" id="nav"></section>
+    <div id="modal-section"></div>
+    <section id="load-page-box"></section>
+
+    <section class="d-none">
+        <div class="container-fluid mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+            <div class="row mx-0 my-0 px-0 py-2">
+                <div class="col-md-4 col-12 mx-0 my-0 px-2 py-md-0 pt-sm-5 pb-sm-0 pt-4 pb-0">
+                    <div class="mx-0 my-0 px-2 py-0 profile-box" style="display:flex;">
+                        <div class="card mx-0 my-0 px-0 py-0 profile-box-inside">
+                            <img src="images/c5.jpg" class="card-img-top img-thumbnail px-1 py-1">
+                            <div class="card-img-overlay row mx-0 my-0 px-0 py-0">
+                                <div class="mx-0 mb-auto mt-0 px-0 py-2 profile-update-box" style="display:flex; background-color: rgba(0, 0, 0, 0.5); opacity:0.8;">
+                                    <div class="mx-0 my-0 px-2 py-0 text-center">
+                                        <i class="fas fa-camera"></i>
+                                    </div>
+                                    <div class="mx-0 my-0 px-0 py-0">
+                                        <p class="mx-0 my-0 px-0 py-0">Update Profile Picture</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-0 mt-auto px-0 py-0">
+                            <span class="first-name">Brijesh Patel</span>
+                            <p class="mx-0 mb-2 px-0 py-0 role">(Critic)</p>
+                        </div>
+                    </div>
+                    <div class="row mx-0 my-0 px-0 py-0 bg-black rounded">
+                        <div class="row ml-auto mr-0 my-0 px-0 py-0">
+                            <a class="text-danger-light hover-blue-dark mx-0 my-0 px-lg-2 px-md-1 px-2 py-xl-3 py-2 border-dark border-left control-button" href="#">Manage</a>
+                            <a class="text-danger-light hover-blue-dark mx-0 my-0 px-lg-2 px-md-1 px-2 py-xl-3 py-2 border-dark border-left control-button" href="#">Summary</a>
+                        </div>
+                    </div>
+                    <div class="col-12 mx-0 my-0 px-0 pt-5 pb-0">
+                        <div class="mx-0 my-0 px-0 py-0" style="display:flex;">
+                            <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:4%;"></div>
+                            <h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+                                Stats
+                            </h5>
+                        </div>
+                        <div class="col-12 mx-0 my-0 px-2 py-4">
+                            <div class="mx-0 my-0 px-0 py-0">
+                                <span><b>Total Profile Views:</b></span>
+                            </div>
+                            <div class="mx-0 my-0 px-0 py-0">
+                                <span>
+                                    0
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12 mx-0 my-0 px-2 py-4">
+                            <div class="mx-0 my-0 px-0 py-0">
+                                <span>
+                                    <b>Profile Views Last 7 Days:</b>
+                                </span>
+                            </div>
+                            <div class="mx-0 my-0 px-0 py-0">
+                                <span>
+                                    0
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mx-0 my-0 px-0 pt-5 pb-0">
+                        <div class="mx-0 my-0 px-0 py-0" style="display:flex;">
+                            <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:4%;"></div>
+                            <h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+                                About
+                            </h5>
+                        </div>
+                        <div class="col-12 mx-0 my-0 px-2 py-4">
+                            <div class="mx-0 my-0 px-0 py-0">
+                                <span>
+                                    <b>Member Since</b>
+                                </span>
+                            </div>
+                            <div class="mx-0 my-0 px-0 py-0">
+                                <span>
+                                    March 1999
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-12 mx-0 my-0 px-2 py-0" style="overflow: hidden;">
+                    <div class="col-12 mx-0 my-0 px-2 py-0">
+                        <div class="btn-group users-tab d-xl-flex d-none" role="group" aria-label="users tab">
+                            <button type="button" class="btn btn-outline-light active border-0 rounded d-md-block d-none" style="z-index:0;" id="overview">
+                                Overview
+                            </button>
+                            <button type="button" class="btn btn-outline-light border-0 rounded d-md-block d-none" style="z-index:0;" id="movie-reviews">
+                                My Movie Reviews
+                            </button>
+                            <button type="button" class="btn btn-outline-light border-0 rounded d-md-block d-none" style="z-index:0;" id="tv-reviews">
+                                My TV Reviews
+                            </button>
+                            <button type="button" class="btn btn-outline-light border-0 rounded d-md-block d-none" style="z-index:0;" id="wts-ni">
+                                Want To See & Not Interested
+                            </button>
+                            <button type="button" class="btn btn-outline-light border-0 rounded d-lg-block d-none" style="z-index:0;" id="my-critics">
+                                My Critics
+                            </button>
+                        </div>
+                        <div class="row mx-0 my-0 px-2 py-1 rounded d-xl-none d-flex">
+                            <div class="dropdown ml-auto" id="filter-dropdown">
+                                <button class="btn btn-outline-light dropdown-toggle menu-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Menu
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right scrollable-menu mx-0 mt-2 mb-0 px-3 py-0" aria-labelledby="dropdownMenuButton"
+                                    id="dropdownMenuButtonBox">
+                                    <div class="col-12 mx-0 my-0 px-0 py-0">
+                                        <div class="col-12 mx-0 my-0 px-0 py-2">
+                                            <h6 class="ml-lg-3 ml-md-2 my-1 px-0 py-0 text-danger">
+                                                <small>In Theaters</small>
+                                            </h6>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat active opening-this-week" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 px-0 my-0 py-0">Opening This Week</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat top-box-office" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 my-0 px-0 py-0">Top Box Office</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat movie-coming-soon" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 my-0 px-0 py-0">Coming Soon</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat guaranteed-movie-picks" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 my-0 px-0 py-0">Guaranteed Movie Picks</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2">
+                                            <h6 class="ml-lg-3 ml-md-2 my-1 px-0 py-0 text-danger">
+                                                <small>DVD & STREAMING MOVIES</small>
+                                            </h6>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat browse-all" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 px-0 my-0 py-0">Browse All</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat top-dvd-streaming" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 my-0 px-0 py-0">Top DVD & Streaming</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat new-relesases" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 my-0 px-0 py-0">New Releases</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat dvd-coming-soon" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 my-0 px-0 py-0">Coming Soon</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat guaranteed-dvd-picks" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 my-0 px-0 py-0">Guaranteed DVD Picks</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2">
+                                            <h6 class="ml-lg-3 ml-md-2 my-1 px-0 py-0 text-danger">
+                                                <small>TV</small>
+                                            </h6>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat new-tv-tonight" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 px-0 my-0 py-0">New TV Tonight</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat most-popular" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 my-0 px-0 py-0">Most Popular TV on Mude</p>
+                                        </div>
+                                        <div class="col-12 mx-0 my-0 px-0 py-2 list bat guaranteed-tv-picks" style="cursor: pointer;">
+                                            <p class="small ml-lg-5 ml-md-3 my-0 px-0 py-0">Guaranteed TV Picks</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mx-0 my-0 px-0 py-0 bg-dark" id="load-page-bounce-user" style="width:100%; height:100%; z-index:2; position: absolute; display: none;">
+                        <div class="row mx-0 my-0 px-0 py-0" style="height:80%;">
+                            <div class="mx-auto my-auto spinner">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                                <div class="bounce4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mx-0 my-0 px-2 pt-4 pb-0" id="wts-movie-box">
+                        <div class="mx-0 my-0 px-0 py-0 bg-danger" style="display:flex;">
+                            <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+                            <h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+                                Want To See Movies 
+                            </h5>
+                        </div>
+                        <div id="wts-list" style="display: none;"></div>
+                        <div id="want-to-see-movie-box">
+                        </div>
+                    </div>
+                    <div class="col-12 mx-0 my-0 px-2 pt-4 pb-0" id="wts-tv-box">
+                        <div class="mx-0 my-0 px-0 py-0 bg-danger" style="display:flex;">
+                            <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+                            <h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+                                Want To See TV Shows
+                            </h5>
+                        </div>
+                        <div id="ni-list" style="display: none;"></div>
+                        <div class="mx-0 my-0 px-0 py-0" id="want-to-see-tv-box" style="display:flex;">
+                            <span class="ml-3 mt-3 mb-5">This user has no Want to See TV selections yet.</span>
+                        </div>
+                    </div>
+                    <div class="col-12 mx-0 my-0 px-2 pt-4 pb-0" id="review-history-box">
+                        <div class="mx-0 my-0 px-0 py-0 bg-danger" style="display:flex;">
+                            <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+                            <h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+                                Review History
+                            </h5>
+                        </div>
+                        <div id="my-review-box" style="display: none;"></div>
+                        <div class="mx-0 mt-3 mb-0 px-0 py-0" id="review-box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="d-none" id="bottom-ad"></section>
+    <footer class="px-0 d-none">
+    </footer>
+    
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/users.js"></script>
+</body>
+</html>

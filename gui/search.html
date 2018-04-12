@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Movies, TV Shows, Artists and More | Mude</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="px-0 d-none" id="nav"></section>
+    <div id="modal-section"></div>
+    <section id="load-page-box"></section>
+
+    <section class="d-none">
+        <div class="container-fluid px-0 py-0 mt-md-0 mt-5 bg-dark">
+            <div class="col-12 mx-0 mt-0 mb-3 px-4 py-4">
+                <h5>Search Result for: "Search Movies..."</h5>
+                <div class="btn-group mt-3 mb-3" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-light active" style="z-index:0;">All</button>
+                    <button type="button" class="btn btn-outline-light">Franchises(1)</button>
+                    <button type="button" class="btn btn-outline-light">Movies(47)</button>
+                    <button type="button" class="btn btn-outline-light">Celebrities(558)</button>
+                    <button type="button" class="btn btn-outline-light">Critics(22)</button>
+                </div>
+                <h6 class="my-3">Franchises</h6>
+                <div class="row mx-0 my-0 px-2 py-2 border-white border-top">
+                    <div class="col-2 mx-0 my-0 text-left">
+                        <a href="franchise.html" class="hover-none">
+                            <img class="my-0" src="images/s7.png">
+                        </a>
+                    </div>
+                    <div class="mx-0 my-0 px-0 py-0">
+                        <a href="franchise.html" class="hover-none">
+                            <p class="my-1 text-danger-light hover-dark" style="font-size:1.2em; font-weight:bold;">
+                                Marvel Cinematic Universe
+                            </p>
+                        </a>
+                    </div>
+                    <div class="w-100 text-right px-0">
+                        <a href="critics.html" class="mr-auto hover-blue">More Franchises ></a>
+                    </div>
+                </div>
+                <h6 class="my-3">Movies</h6>
+                <div class="row mx-0 my-0 px-2 py-2 border-white border-top">
+                    <h3 class="col-1 my-auto gold guaranteed">M</h3>
+                    <p class="col-1 my-auto pl-1 pr-5">94%</p>
+                    <div class="col-2 mx-0 my-0 text-left">
+                        <img class="my-0" src="images/s1.png">
+                    </div>
+                    <div class="mx-0 my-0 px-0 py-0">
+                        <a href="movies-detail.html" class="hover-none">
+                            <p class="my-1 text-danger-light hover-dark" style="font-size:1.2em; font-weight:bold;">
+                                The Story of Adele H (1975)
+                            </p>
+                        </a>
+                        <p class="my-1">
+                            Isabelle Adjani, Sylvia Marriott, Bruce Robinson
+                        </p>
+                    </div>
+                </div>
+                <div class="row mx-0 my-0 px-2 py-2 border-white border-top">
+                    <h3 class="col-1 my-auto gold">M</h3>
+                    <p class="col-1 my-auto pl-1 pr-5">74%</p>
+                    <div class="col-2 mx-0 my-0 text-left">
+                        <img class="my-0" src="images/s2.png">
+                    </div>
+                    <div class="mx-0 my-auto px-0 py-0">
+                        <a href="movies-detail.html" class="hover-none">
+                            <p class="text-danger-light hover-dark" style="font-size:1.2em; font-weight:bold;">
+                                C H O M P S (2005)
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row mx-0 my-0 px-2 py-2 border-white border-top">
+                    <h3 class="col-1 my-auto silver">M</h3>
+                    <p class="col-1 my-auto pl-1 pr-5">64%</p>
+                    <div class="col-2 mx-0 my-0 text-left">
+                        <img class="my-0" src="images/s3.png">
+                    </div>
+                    <div class="mx-0 my-0 px-0 py-0">
+                        <a href="movies-detail.html" class="hover-none">
+                            <p class="my-1 text-danger-light hover-dark" style="font-size:1.2em; font-weight:bold;">
+                                H (2002)
+                            </p>
+                        </a>
+                        <p class="my-1">
+                            Jung-ah Yum, Jeong-Ah Yeom, Jung-ah Yum
+                        </p>
+                    </div>
+                </div>
+                <div class="row mx-0 my-0 px-2 py-2 border-white border-top">
+                    <h3 class="col-1 my-auto black">M</h3>
+                    <p class="col-1 my-auto pl-1 pr-5">34%</p>
+                    <div class="col-2 mx-0 my-0 text-left">
+                        <img class="my-0" src="images/s4.png">
+                    </div>
+                    <div class="mx-0 my-0 px-0 py-0">
+                        <a href="movies-detail.html" class="hover-none">
+                            <p class="my-1 text-danger-light hover-dark" style="font-size:1.2em; font-weight:bold;">
+                                Hannah med H (A Different Way) (2003)
+                            </p>
+                        </a>
+                        <p class="my-1">
+                            Tove Edfeldt, Joel Kinnaman, Adnan Zorlak
+                        </p>
+                    </div>
+                </div>
+                <div class="row mx-0 my-0 px-2 py-2 border-white border-top">
+                    <h3 class="col-1 my-auto gold">M</h3>
+                    <p class="col-1 my-auto pl-1 pr-5">72%</p>
+                    <div class="col-2 mx-0 my-0 text-left">
+                        <img class="my-0" src="images/s5.png">
+                    </div>
+                    <div class="mx-0 my-0 px-0 py-0">
+                        <a href="movies-detail.html" class="hover-none">
+                            <p class="my-1 text-danger-light hover-dark" style="font-size:1.2em; font-weight:bold;">
+                                H-E-Double Hockey Sticks! (1999)
+                            </p>
+                        </a>
+                        <p class="my-1">
+                            Will Friedle, Rhea Perlman, Matthew Lawrence
+                        </p>
+                    </div>
+                </div>
+                <div class="row mx-0 my-0 px-2 py-2 border-white border-top">
+                    <h3 class="col-1 my-auto bronze">M</h3>
+                    <p class="col-1 my-auto pl-1 pr-5">54%</p>
+                    <div class="col-2 mx-0 my-0 text-left">
+                        <img class="my-0" src="images/s6.png">
+                    </div>
+                    <div class="mx-0 my-0 px-0 py-0">
+                        <a href="movies-detail.html" class="hover-none">
+                            <p class="my-1 text-danger-light hover-dark" style="font-size:1.2em; font-weight:bold;">
+                                A Walk Through H: The Reincarnation of an Ornithologist (1978)
+                            </p>
+                        </a>
+                        <p class="my-1">
+                            Isabelle Adjani, Sylvia Marriott, Bruce Robinson
+                        </p>
+                    </div>
+                </div>
+                <div class="row mx-0 my-0 px-2 py-2 border-white border-top">
+                    <h3 class="col-1 my-auto bronze">M</h3>
+                    <p class="col-1 my-auto pl-1 pr-5">54%</p>
+                    <div class="col-2 mx-0 my-0 text-left">
+                        <img class="my-0" src="images/s1.png">
+                    </div>
+                    <div class="mx-0 my-0 px-0 py-0">
+                        <a href="movies-detail.html" class="hover-none">
+                            <p class="my-1 text-danger-light hover-dark" style="font-size:1.2em; font-weight:bold;">
+                                The Story of Adele H (1975)
+                            </p>
+                        </a>
+                        <p class="my-1">
+                            Isabelle Adjani, Sylvia Marriott, Bruce Robinson
+                        </p>
+                    </div>
+                </div>
+                <div class="w-100 text-right px-0">
+                    <a href="browse.html" class="mr-auto hover-blue">View All ></a>
+                </div>
+                <h6 class="my-3">Celebrities</h6>
+                <div class="row mx-0 my-0 px-2 py-5 border-white border-top">
+                
+                </div>
+                <div class="col text-right px-0">
+                    <a href="browse.html" class="mr-auto hover-blue">View All ></a>
+                </div>
+
+                <h6 class="my-3">Critics</h6>
+                <div class="row mx-0 my-0 px-2 py-5 border-white border-top">
+                
+                </div>
+                <div class="col text-right px-0">
+                    <a href="critics.html" class="mr-auto hover-blue">View All ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bottom-ad" class="d-none"></section>
+    
+    <footer class="px-0 d-none">
+    </footer>
+    
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

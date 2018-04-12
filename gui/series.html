@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TV Series | Mude</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+	<section class="px-0 d-none" id="nav"></section>
+	<div id="modal-section"></div>
+	<section id="load-page-box"></section>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<!-- 16:9 aspect ratio -->
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always">></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="d-none">
+		<div class="container-fluid px-0 py-0 mt-md-0 mt-5 bg-dark">
+			<div class="row mx-0 my-0 px-0 py-2 bg-dark d-md-block d-none">
+				<a class="mx-2 my-0 px-0 py-0 text-danger-light hover-dark text-uppercase" href="index.html">Home</a>
+				>
+				<a class="mx-2 my-0 px-0 py-0 text-danger-light hover-dark text-uppercase" href="franchise.html">Marvel Cinematic Universe</a>
+				>
+				<a class="mx-2 my-0 px-0 py-0 text-uppercase hover-none">MARVEL'S AGENTS OF S.H.I.E.L.D.</a>
+			</div>
+
+			<div class="col-12 mx-0 my-0 px-0 py-0" style="overflow: hidden !important;">
+				<a class="mx-0 my-0 px-0 py-0 hover-none trailer-link video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/T3T-evQZiQo"
+				 data-target="#myModal" href="#">
+					<div class="card trailer">
+						<img class="card-img-top rounded-0 d-md-block d-none" src="images/h2.jpg" alt="Card image cap">
+						<img class="card-img-top rounded-0 d-md-none d-block" src="images/h2-1.png" alt="Card image cap">
+						<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+							<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+								<div class="mr-auto mt-auto px-3 py-3 text-left">
+									<h4 class="mt-0 mb-3">
+										<span class="badge badge-danger px-3 py-2" style="opacity:0.8; font-family:'Lovelo Black';">Trailer</span>
+									</h4>
+									<h2 class="my-0 py-0 d-xl-block d-md-none d-block">MARVEL'S AGENTS OF S.H.I.E.L.D. <small style="white-space: nowrap;"> (2013 -)</small></h2>
+									<h4 class="my-0 py-0 d-xl-none d-md-block d-none">MARVEL'S AGENTS OF S.H.I.E.L.D. <small style="white-space: nowrap;"> (2013 -)</small></h4>
+									<div class="col-11 mx-0 my-0 px-0 py-0 trailer-text">
+										<p class="my-0 py-1 text-uppercase d-lg-block d-md-none d-sm-block d-none">
+											After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king.
+										</p>
+										<h1 class="my-0 py-2 d-xl-block d-md-none d-block" style="font-family:'Lovelo Black';">
+											<span class="badge badge-danger pl-3 pr-4 py-2 mt-3 mb-0" style="opacity:0.8;">Click to Play</span>
+										</h1>
+										<h3 class="my-0 py-2 d-xl-none d-xl-none d-md-block d-none" style="font-family:'Lovelo Black';">
+											<span class="badge badge-danger pl-3 pr-4 py-2 mt-3 mb-0" style="opacity:0.8;">Click to Play</span>
+										</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-12 mx-0 my-0 px-md-3 px-2 py-2 bg-dark">
+				<div id="franchise-box"></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="row mx-0 my-0 px-0 py-0">
+				<div class="col-lg-9 col-12 mx-0 my-0 px-3 pt-1 pb-2">
+					<div id="poster-meter-box"></div>
+				</div>
+				<!-- Advertisement -->
+				<div class="col-lg-3 mx-0 my-0 px-3 pt-1 pb-2 d-lg-block d-none">
+					<div class="mx-0 my-0 px-0 py-0 text-center">
+						<div class="mx-0 my-4 px-0 py-0 text-center">
+							<a class="mx-0 my-0 px-0 py-0">
+								<img id="ad3" src="images/ad-3.png" style="width:100%;">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-black">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-black">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-light">
+					<div class="mx-0 my-0 px-0 py-0 bg-light header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-danger text-uppercase bg-black">
+						Seasons
+					</h4>
+				</div>
+			</div>
+	
+			<div class="row mx-0 mt-3 mb-0 px-0 pt-3 pb-3 bg-black">
+				<div class="col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-2" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-4 mx-0 my-0 px-2 py-0 text-right">
+								<img src="images/tv-sr1.jpg" class="img-fluid rounded" />
+							</div>
+							<div class="col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<a class="text-uppercase hover-dark" href="tv-season.html">
+									<b class="text-white">Marvel's Agents of S.H.I.E.L.D.:
+										<span class="text-danger-light" style="white-space: nowrap;">Season 5</span>
+									</b>
+								</a>
+								<div class="row mx-0 my-0 px-0 py-md-2 py-sm-4 py-2">
+									<div class="col-lg-5 col-md-6 col-5 row mx-0 my-0 px-2 py-0">
+										<h2 class="my-0 gold">M</h2>
+										<h5 class="ml-xl-2 ml-0 mr-0 my-auto">91%</h5>
+									</div>
+									<div class="col-lg-7 col-md-6 col-7 mx-0 my-0 px-2 py-0">
+										<div class="progress mx-0 my-0 px-0 py-0" style="height:100%; border-radius:5px;">
+											<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="98" aria-valuemin="0"
+											 aria-valuemax="100" style="width: 91%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 mx-0 my-0 px-0 pt-2 pb-0">
+									<p class="my-lg-2 my-0 py-0">Critics Consensus: No consensus yet.</p>
+									<p class="my-lg-2 my-0 py-0">2017, ABC, 17 episodes</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-2" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-4 mx-0 my-0 px-2 py-0 text-right">
+								<img src="images/tv-sr2.jpg" class="img-fluid rounded" />
+							</div>
+							<div class="col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<a class="text-uppercase hover-dark" href="tv-season.html">
+									<b class="text-white">Marvel's Agents of S.H.I.E.L.D.:
+										<span class="text-danger-light" style="white-space: nowrap;">Season 4</span>
+									</b>
+								</a>
+								<div class="row mx-0 my-0 px-0 py-md-2 py-sm-4 py-2">
+									<div class="col-lg-5 col-md-6 col-5 row mx-0 my-0 px-2 py-0">
+										<h2 class="my-0 silver">M</h2>
+										<h5 class="ml-xl-2 ml-0 mr-0 my-auto">69%</h5>
+									</div>
+									<div class="col-lg-7 col-md-6 col-7 mx-0 my-0 px-2 py-0">
+										<div class="progress mx-0 my-0 px-0 py-0" style="height:100%; border-radius:5px;">
+											<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="98" aria-valuemin="0"
+											 aria-valuemax="100" style="width: 69%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 mx-0 my-0 px-0 pt-2 pb-0">
+									<p class="my-lg-2 my-0 py-0">Critics Consensus: Agents of S.H.I.E.L.D. explores darker territory in its fourth season with the thrilling introduction
+										of Ghost Rider, setting up an action-packed new chapter of Marvel's edgier mythologies.
+									</p>
+									<p class="my-lg-2 my-0 py-0">2016, ABC, 22 episodes</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-2" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-4 mx-0 my-0 px-2 py-0 text-right">
+								<img src="images/tv-sr2.jpg" class="img-fluid rounded" />
+							</div>
+							<div class="col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<a class="text-uppercase hover-dark" href="tv-season.html">
+									<b class="text-white">Marvel's Agents of S.H.I.E.L.D.:
+										<span class="text-danger-light" style="white-space: nowrap;">Season 3</span>
+									</b>
+								</a>
+								<div class="row mx-0 my-0 px-0 py-md-2 py-sm-4 py-2">
+									<div class="col-lg-5 col-md-6 col-5 row mx-0 my-0 px-2 py-0">
+										<h2 class="my-0 gold">M</h2>
+										<h5 class="ml-xl-2 ml-0 mr-0 my-auto">91%</h5>
+									</div>
+									<div class="col-lg-7 col-md-6 col-7 mx-0 my-0 px-2 py-0">
+										<div class="progress mx-0 my-0 px-0 py-0" style="height:100%; border-radius:5px;">
+											<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="98" aria-valuemin="0"
+											 aria-valuemax="100" style="width: 91%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 mx-0 my-0 px-0 pt-2 pb-0">
+									<p class="my-lg-2 my-0 py-0">Critics Consensus: No consensus yet.</p>
+									<p class="my-lg-2 my-0 py-0">2017, ABC, 17 episodes</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-2" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-4 mx-0 my-0 px-2 py-0 text-right">
+								<img src="images/tv-sr1.jpg" class="img-fluid rounded" />
+							</div>
+							<div class="col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<a class="text-uppercase hover-dark" href="tv-season.html">
+									<b class="text-white">Marvel's Agents of S.H.I.E.L.D.:
+										<span class="text-danger-light" style="white-space: nowrap;">Season 2</span>
+									</b>
+								</a>
+								<div class="row mx-0 my-0 px-0 py-md-2 py-sm-4 py-2">
+									<div class="col-lg-5 col-md-6 col-5 row mx-0 my-0 px-2 py-0">
+										<h2 class="my-0 gold">M</h2>
+										<h5 class="ml-xl-2 ml-0 mr-0 my-auto">91%</h5>
+									</div>
+									<div class="col-lg-7 col-md-6 col-7 mx-0 my-0 px-2 py-0">
+										<div class="progress mx-0 my-0 px-0 py-0" style="height:100%; border-radius:5px;">
+											<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="98" aria-valuemin="0"
+											 aria-valuemax="100" style="width: 91%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 mx-0 my-0 px-0 pt-2 pb-0">
+									<p class="my-lg-2 my-0 py-0">Critics Consensus: No consensus yet.</p>
+									<p class="my-lg-2 my-0 py-0">2017, ABC, 17 episodes</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-12 mx-0 my-0 px-2 py-2">
+					<div class="col-12 mx-0 my-0 px-0 py-2" style="min-height:100% !important;">
+						<div class="row mx-0 my-0 px-0 py-0">
+							<div class="col-4 mx-0 my-0 px-2 py-0 text-right">
+								<img src="images/tv-sr1.jpg" class="img-fluid rounded" />
+							</div>
+							<div class="col-8 mx-0 my-0 pl-2 pr-0 py-0">
+								<a class="text-uppercase hover-dark" href="tv-season.html">
+									<b class="text-white">Marvel's Agents of S.H.I.E.L.D.:
+										<span class="text-danger-light" style="white-space: nowrap;">Season 1</span>
+									</b>
+								</a>
+								<div class="row mx-0 my-0 px-0 py-md-2 py-sm-4 py-2">
+									<div class="col-lg-5 col-md-6 col-5 row mx-0 my-0 px-2 py-0">
+										<h2 class="my-0 gold">M</h2>
+										<h5 class="ml-xl-2 ml-0 mr-0 my-auto">91%</h5>
+									</div>
+									<div class="col-lg-7 col-md-6 col-7 mx-0 my-0 px-2 py-0">
+										<div class="progress mx-0 my-0 px-0 py-0" style="height:100%; border-radius:5px;">
+											<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="98" aria-valuemin="0"
+											 aria-valuemax="100" style="width: 91%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 mx-0 my-0 px-0 pt-2 pb-0">
+									<p class="my-lg-2 my-0 py-0">Critics Consensus: No consensus yet.</p>
+									<p class="my-lg-2 my-0 py-0">2017, ABC, 17 episodes</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+						Videos
+					</h4>
+				</div>
+			</div>
+	
+			<div class="details owl-carousel owl-theme mx-0 mt-3 mb-0 px-0 pt-3 pb-0" style="z-index:0;">
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr2.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">01:56</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<p class="mx-0 my-0">Doctor Strange: Trailer 2</p>
+					</div>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr1.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">11:56</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<p class="mx-0 my-0">DeadPool: Trailer 1</p>
+					</div>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr3.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">02:56</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<p class="mx-0 my-0">Spiderman: Trailer 5</p>
+					</div>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr4.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">00:56</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<p class="mx-0 my-0">Thor Ragnarok: Teaser 1</p>
+					</div>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr1.png" alt="Card image cap">
+							<div class="card-img-overlay mx-0 my-0 px-1 py-1 text-right">
+								<h6 class="ml-auto mr-0 my-0 px-0 py-0">
+									<span class="badge-pill badge-dark py-1 px-2" style="opacity:0.7 !important;">00:05</span>
+								</h6>
+							</div>
+							<div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+								<div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+									<i class="fas fa-play fa-4x ml-auto mt-auto px-3 py-3" style="opacity:0.7;"></i>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="mx-0 my-0 px-0 py-0">
+						<p class="mx-0 my-0">DeadPool: Trailer 1</p>
+					</div>
+				</div>
+			</div>
+			<div class="col text-right px-2 my-sm-0 mt-3 mb-0">
+				<a href="browse.html" class="mr-auto text-danger-light hover-dark">
+					<b>View All Videos&#8195;(36)</b>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+						Photos
+					</h4>
+				</div>
+			</div>
+	
+			<div class="details owl-carousel owl-theme mx-0 mt-3 mb-0 px-0 pt-3 pb-0" style="z-index:0;">
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/h1.jpg" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr4.png" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr2.png" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr1.png" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a class="mx-0 my-0 px-0 py-0 hover-blue" href="https://www.youtube.com">
+						<div class="card px-0 py-0 mx-0 my-0">
+							<img class="card-img-top rounded-0" src="images/tr3.png" alt="Card image cap">
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col text-right px-2 my-sm-0 mt-3 mb-0">
+				<a href="browse.html" class="mr-auto text-danger-light hover-dark">
+					<b>View All Photos&#8195;(20)</b>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none">
+		<div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+			<div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+				<div class="row mx-0 mt-md-4 mt-0 mb-0 px-0 py-0 bg-danger header-label">
+					<div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+					<h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-block d-none">
+						Series Details
+					</h4>
+					<h5 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark d-md-none d-block">
+						Series Details
+					</h5>
+				</div>
+			</div>
+	
+			<div class="row mx-0 my-0 px-2 pt-lg-5 pt-3 pb-0">
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Creators</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					<a href="browse.html" class="text-danger-light hover-dark">Jed Whedon</a>,&#8195;
+					<a href="browse.html" class="text-danger-light hover-dark">Joss Whedon</a>,&#8195;
+					<a href="browse.html" class="text-danger-light hover-dark">Maurissa Tancharoen</a>
+				</div>
+				
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Starring</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					<a href="browse.html" class="text-danger-light hover-dark">Clark Gregg</a>,&#8195;
+					<a href="browse.html" class="text-danger-light hover-dark">Ming-Na Wen</a>,&#8195;
+					<a href="browse.html" class="text-danger-light hover-dark">Brett Dalton (II)</a> 
+				</div>
+			</div>
+	
+			<div class="row mx-0 my-0 px-2 pt-0 pb-lg-5 pb-3">
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>TV Network</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					 ABC
+				</div>
+	
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Genre</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					<a href="browse.html" class="text-danger-light hover-dark">Action & Adventure</a>
+				</div>
+	
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Executive Producers</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					<a href="artists.html" class="text-danger-light hover-dark">Joss Whedon</a>
+				</div>
+	
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Written By</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					<a href="artists.html" class="text-danger-light hover-dark">Joe Robert Cole</a>,&#8195;
+					<a href="artists.html" class="text-danger-light hover-dark">Ryan Coogler</a>
+				</div>
+	
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>In Theaters</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					Feb 16, 2018 Wide
+				</div>
+	
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Box Office</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					$501,105,037
+				</div>
+	
+				<div class="col-3 mx-0 my-0 px-2 py-1 text-right">
+					<b>Runtime</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-1">
+					135 minutes
+				</div>
+	
+				<div class="col-3 mx-0 my-0 px-2 py-0 text-right">
+					<b>Studio</b>
+				</div>
+				<div class="col-9 mx-0 my-0 px-2 py-0">
+					<a href="franchise.html" class="text-danger-light hover-dark">Marvel Studios</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="d-none px-0">
+		<div id="cast-box"></div>
+	</section>
+
+	<section class="d-none" id="bottom-ad">
+	</section>
+	
+	<footer class="px-0 d-none">
+	</footer>
+
+	<script src="jquery/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<script src="js/tv-series.js"></script>
+</body>
+</html>

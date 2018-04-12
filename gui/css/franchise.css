@@ -1,0 +1,67 @@
+.intro {
+    background: url("../images/f1.jpg"); 
+    background-size:100% auto;
+    background-repeat: no-repeat; 
+    background-color: #000;
+}
+
+.features-anchor img {
+    -webkit-filter: brightness(50%); 
+    filter: brightness(50%);
+}
+
+.features-anchor:hover img {
+    -webkit-filter: brightness(100%); 
+    filter: brightness(100%);
+}
+
+.features-anchor:hover h6 {
+    color: #ff8a80 !important;
+}
+
+.features-small-box:hover img {
+    -webkit-filter: brightness(100%); 
+    filter: brightness(100%);
+}
+
+.features-small-box:hover p {
+    color: #ff8a80 !important;
+}
+
+.features-small-box img {
+    -webkit-filter: brightness(50%); 
+    filter: brightness(50%);
+}
+
+.owl-carousel img {
+    -webkit-filter: brightness(50%); 
+    filter: brightness(50%);
+}
+
+.owl-carousel .fa-play-circle {
+    -webkit-filter: brightness(50%); 
+    filter: brightness(50%);
+}
+
+.owl-carousel .item:hover img {
+    -webkit-filter: brightness(100%); 
+    filter: brightness(100%);
+}
+
+.owl-carousel .item:hover .fa-play-circle {
+    -webkit-filter: brightness(100%); 
+    filter: brightness(100%);
+}
+
+.badge-dark {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.owl-nav {
+    font-family: "Lulo Clean One Bold";
+}
+
+.img-box img {
+    -webkit-filter: brightness(50%); 
+    filter: brightness(50%);
+}

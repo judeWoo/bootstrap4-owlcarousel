@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mude | Movies, TV Shows, Reviews and More!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="images/logo-white.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+</head>
+<body>
+    <section id="nav" class="d-none" th:fragment="header">
+        <div class="container-fluid px-0 py-0 mx-0 my-0 d-none d-md-block">
+            <nav class="navbar navbar-expand navbar-dark bg-dark mx-0 my-0 px-0 py-0" style="z-index:2;">
+                <a class="navbar-brand mr-auto mx-0 my-0 px-0 py-0" href="#">
+                </a>
+                <ul class="navbar-nav mx-0 mt-3 mb-0 px-0 py-0" id="top-navbar-small">
+                    <li class="nav-item ml-0 mr-2 my-auto px-0 py-0 upper">
+                        <a class="nav-link mx-0 my-0 px-0 py-0" href="#" data-toggle="modal" data-target="#meterModalCenter" style="font-family: 'Roboto', sans-serif;">
+                            <small>What's the MudeMeter®?</small>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown mx-2 my-0 px-1 py-0 upper border-0 user-tab d-none">
+                        <a class="nav-link dropdown-toggle mx-0 my-0 px-0 py-0 small" href="users.html" id="navbarDropdown-id" role="button" aria-haspopup="true" aria-expanded="false" style="overflow:hidden;">
+                            <img class="ml-0 mr-1 rounded-circle" src="images/critics.gif">
+                            <small>Hey, Brijesh!</small>
+                        </a>
+                        <div class="dropdown-menu border-0 rounded-0" aria-labelledby="navbarDropdown-id" id="navbarDropdown-id-box" style="background-color: rgba(0,0,0,0.9) !important; color:#fff;">
+                            <div class="col-12 mx-0 my-0 px-2 py-0">
+                                <span class="first-name"><b>Brijesh</b></span>
+                                <span class="white-space">
+                                    <b> </b>
+                                </span>
+                                <span class="last-name">
+                                    <b>Patel</b>
+                                </span>
+                            </div>
+                            <a class="mx-0 my-0 px-0 py-0 hover-none hover-blue-super" href="users.html">
+                                <div class="row mx-0 my-0 px-2 py-1">
+                                    <i class="fas fa-plus text-primary my-auto" style="font-size:1.3rem;"></i>
+                                    <p class="mx-1 my-auto px-0 py-0">10</p>
+                                    <p class="mx-0 my-auto px-0 py-0">Want To See</p>
+                                </div>
+                            </a>
+                            <a class="mx-0 my-0 px-0 py-0 hover-none hover-blue-super" href="users.html">
+                                <div class="row mx-0 my-0 px-2 py-1" style="border-bottom: 1px solid rgba(255, 255, 255, .5);">
+                                    <i class="fas fa-star text-warning my-auto"></i>
+                                    <p class="mx-1 my-auto px-0 py-0">10</p>
+                                    <p class="mx-0 my-auto px-0 py-0">Reviews</p>
+                                </div>
+                            </a>
+                            <a class="mx-0 my-0 px-0 py-0 hover-none hover-blue-super" href="users.html">
+                                <div class="row mx-0 my-0 px-2 py-1">
+                                    <p class="mx-0 my-auto px-0 py-0">Profile</p>
+                                </div>
+                            </a>
+                            <a class="mx-0 my-0 px-0 py-0 hover-none hover-blue-super" href="users.html">
+                                <div class="row mx-0 my-0 px-2 py-1">
+                                    <p class="mx-0 my-auto px-0 py-0">Account</p>
+                                </div>
+                            </a>
+                            <a class="mx-0 my-0 px-0 py-0 hover-none hover-blue-super" href="#" id="signOutButton">
+                                <div class="row mx-0 my-0 px-2 py-1">
+                                    <p class="mx-0 my-auto px-0 py-0">Sign Out</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2 my-0 px-0 py-0 upper signUp-label">
+                        <a class="nav-link mx-0 my-0 px-0 py-0" href="#" data-toggle="modal" data-target="#signUpModalCenter"><small>Sign Up</small></a>
+                    </li>
+                    <li class="nav-item mx-0 my-0 px-0 py-0 upper signIn-label">
+                        <a class="nav-link mx-0 my-0 my-0 py-0" href="#" data-toggle="modal" data-target="#logInModalCenter"><small>Sign In</small></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container-fluid mx-0 my-0 px-0 py-0" id="navbar-second">
+            <nav class="navbar navbar-expand navbar-dark bg-dark mx-0 my-0 px-2 py-0" id="top-navbar-parent">
+                <a href="search.html" class="btn btn-outline-light d-md-none d-sm-block">
+                    <i class="fas fa-search search-icon"></i>
+                </a>
+                <a class="navbar-brand mx-md-0 my-0 px-0 py-0 mx-sm-auto mx-auto" href="#">
+                    <span class="row mx-0 my-0 px-0 py-0">
+                        MUD
+                        <b class="text-danger">E</b>
+                    </span>
+                </a>
+                <button class="navbar-toggler btn-outline-light border-white border d-md-none d-sm-block d-block mr-0 py-2 text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars bar-icon"></i>
+                </button>
+                <form class="form-inline mx-auto d-none d-md-block">
+                    <div class="input-group border-0">
+                        <input type="search" id="top-search-bar" class="form-control border-0 search-bar" placeholder="Search Movies, TV, actors, more..." aria-label="Search" aria-describedby="search-text" data-toggle="dropdown">
+                        <div class="input-group-append bg-white border-0 rounded-right px-0">
+                            <a class="nav-link mt-1 mb-0 px-2 py-0 border-0 hover-none search-link" href="search.html">
+                                <i class="fas fa-search text-dark search-icon"></i>
+                            </a>
+                        </div>
+                        <div class="dropdown-menu my-0" aria-labelledby="top-search-bar" style="width:100%;" id="top-search-bar-dd">
+                            <div class="col-12 px-0 py-0 mt-md-0 mt-sm-5 mt-5" style="background-color: #fff; overflow: hidden;">
+                                <div class="col-12 mx-0 my-0 px-0 py-0 bg-dark" id="load-page-bounce" style="width:100%; height:100%; z-index:1; position: absolute; display: none;">
+                                    <div class="row mx-0 my-0 px-0 py-0" style="height:80%;">
+                                        <div class="mx-auto my-auto spinner">
+                                            <div class="bounce1"></div>
+                                            <div class="bounce2"></div>
+                                            <div class="bounce3"></div>
+                                            <div class="bounce4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mx-0 my-0 px-0 pt-4 pb-0" style="background-color: #fff;" id="top-movie-heading">
+                                    <div class="row mx-0 my-0 px-0 py-0 bg-danger header-label-light">
+                                        <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:4%;"></div>
+                                        <h5 class="mx-0 my-0 px-2 py-0 text-uppercase" style="color: #000; background-color: #fff;">
+                                            Top Movies Now
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="mx-0 my-0 px-0 pt-4 pb-0" style="background-color: #fff; display: none;" id="movie-heading">
+                                    <div class="row mx-0 my-0 px-0 py-0 bg-danger header-label-light">
+                                        <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:4%;"></div>
+                                        <h5 class="mx-0 my-0 px-2 py-0 text-uppercase" style="color: #000; background-color: #fff;">
+                                            Movies
+                                        </h5>
+                                    </div>
+                                </div>
+                                <a href="search.html" class="mx-0 mt-4 mb-0 px-2 py-2 dropdown-item" style="display: flex;" onclick="search.html">
+                                    <div class="col-2 mx-0 my-0 px-2 py-2">
+                                        <img class="img-fluid" src="images/tv1.png">
+                                    </div>
+                                    <div class="row col-10 mx-0 my-0 px-2 py-2">
+                                        <h6 class="my-auto">
+                                            <b>The Good Place</b>
+                                            <span class="text-muted small">(2018)</span>
+                                        </h6>
+                                    </div>
+                                </a>
+                                <a href="search.html" class="mx-0 my-0 px-2 py-2 dropdown-item" style="display: flex;">
+                                    <div class="col-2 mx-0 my-0 px-2 py-2">
+                                        <img class="img-fluid" src="images/tv2.png">
+                                    </div>
+                                    <div class="row col-10 mx-0 my-0 px-2 py-2">
+                                        <h6 class="my-auto">
+                                            <b>The Defiant Ones</b>
+                                            <span class="text-muted small">(2018)</span>
+                                        </h6>
+                                    </div>
+                                </a>
+                                <a href="search.html" class="mx-0 my-0 px-2 py-2 dropdown-item" style="display: flex;">
+                                    <div class="col-2 mx-0 my-0 px-2 py-2">
+                                        <img class="img-fluid" src="images/tv3.png">
+                                    </div>
+                                    <div class="row col-10 mx-0 my-0 px-2 py-2">
+                                        <h6 class="my-auto">
+                                            <b>Alicias Grace</b>
+                                            <span class="text-muted small">(2018)</span>
+                                        </h6>
+                                    </div>
+                                </a>
+                                <a href="search.html" class="mx-0 my-0 px-2 py-2 dropdown-item" style="display: flex;">
+                                    <div class="col-2 mx-0 my-0 px-2 py-2">
+                                        <img class="img-fluid" src="images/tv4.png">
+                                    </div>
+                                    <div class="row col-10 mx-0 my-0 px-2 py-2">
+                                        <h6 class="my-auto">
+                                            <b>American Vandal</b>
+                                            <span class="text-muted small">(2018)</span>
+                                        </h6>
+                                    </div>
+                                </a>
+                                <a href="search.html" class="mx-0 my-0 px-2 py-2 dropdown-item" style="display: flex;">
+                                    <div class="col-2 mx-0 my-0 px-2 py-2">
+                                        <img class="img-fluid" src="images/tv5.png">
+                                    </div>
+                                    <div class="row col-10 mx-0 my-0 px-2 py-2">
+                                        <h6 class="my-auto">
+                                            <b>Early Man</b>
+                                            <span class="text-muted small">(2018)</span>
+                                        </h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <ul class="navbar-nav" id="top-navbar">
+                    <li class="nav-item dropdown rounded mx-0 mt-5 pb-0 d-none d-md-block top-navbar-item">
+                        <a class="nav-link dropdown-toggle" href="browse.html" id="navbarDropdown1" role="button" aria-haspopup="true" aria-expanded="false" style="height:100%;">
+                            Movies & Dvds
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="navbarDropdown1" id="navbarDropdownBox1" style="background-color: rgba(0,0,0,0.9) !important; color:#fff;">
+                            <div class="container-fluid">
+                                <div class="row px-0 pt-0 pb-2">
+                                    <div class="col-2 pt-3 pb-0 my-0">
+                                        <ul class="px-0 py-0" style="list-style-type: none;">
+                                            <li class="px-0 py-0">
+                                                <h6>
+                                                    <a href="browse.html" class="text-white hover-blue">Movies In Theaters</a>
+                                                </h6>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Opening This Week</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Top Box Office</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Coming Soon to Theaters</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Weekend Earnings</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Guaranteed New Movies</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-2 pt-3 pb-0 my-0">
+                                        <ul class="px-0 py-0" style="list-style-type: none;">
+                                            <li class="px-0 py-0">
+                                                <h6>
+                                                    <a href="browse.html" class="text-white text-uppercase hover-blue">On DVD & Streamings</a>
+                                                </h6>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">FandangoNOW</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Netflix Streaming</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">iTunes</a>
+                                            </li>
+                                            <li>
+                                                <a href="browse.html" class="text-white small hover-blue">Amazon & Amazon Prime</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Top DVD & Streaming</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">New Releases</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Coming soon to DVD</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Certified Fresh Movies</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Browse All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-2 px-0 pt-3 pb-0 my-0 text-center">
+                                        <ul class="px-0 py-0" style="list-style-type: none;">
+                                            <li class="px-0 py-0">
+                                                <h6>
+                                                    <a class="text-white text-uppercase hover-none">More</a>
+                                                </h6>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Top Movies</a>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-1">
+                                                <a href="browse.html" class="text-white small hover-blue">Top Trailers</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 pl-1 pt-3 pb-0 my-0 text-center">
+                                        <ul class="px-0 py-0" style="list-style-type: none;">
+                                            <li class="px-0 py-0">
+                                                <h6 class="text-light">Guaranteed Picks</h6>
+                                            </li>
+                                            <li class="px-0 py-0">
+                                                <div class="row mt-2">
+                                                    <div class="col-4 text-center my-0 py-0">
+                                                        <a href="movies-detail.html" style="text-decoration: none;">
+                                                            <div class="card hover-blue">
+                                                                <img class="card-img-top img-fluid" src="images/tv3.png" alt="Dropdown img">
+                                                                <div class="card-body px-0 py-0">
+                                                                    <h3 class="my-0 gold">M</h3>
+                                                                    <h6 class="mx-0 my-0">Black Panther</h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 text-center my-0 py-0">
+                                                        <a href="movies-detail.html" style="text-decoration: none;">
+                                                            <div class="card hover-blue">
+                                                                <img class="card-img-top img-fluid" src="images/tv1.png" alt="Dropdown img">
+                                                                <div class="card-body px-0 py-0">
+                                                                    <h3 class="my-0 gold">M</h3>
+                                                                    <h6 class="mx-0 my-0">The Good Place</h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 text-center my-0 py-0">
+                                                        <a href="movies-detail.html" style="text-decoration: none;">
+                                                            <div class="card hover-blue">
+                                                                <img class="card-img-top img-fluid" src="images/tv2.png" alt="Dropdown img">
+                                                                <div class="card-body px-0 py-0">
+                                                                    <h3 class="my-0 neon">M</h3>
+                                                                    <h6 class="mx-0 my-0">The Defiant Ones</h6>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown rounded mx-0 mt-5 pb-0 d-none d-md-block top-navbar-item">
+                        <a class="nav-link dropdown-toggle" href="tv.html" id="navbarDropdown2" role="button" aria-haspopup="true" aria-expanded="false" style="height:100%;">
+                            TV
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="navbarDropdown2" id="navbarDropdownBox2" style="background-color: rgba(0,0,0,0.9) !important; color:#fff;">
+                            <div class="container-fluid">
+                                <div class="row px-0 pt-0 pb-2">
+                                    <div class="col-3 pt-3 pb-0 my-0">
+                                        <ul class="px-0 py-0" style="list-style-type: none;">
+                                            <li class="px-0 py-0">
+                                                <h6>
+                                                    <a href="tv.html" class="text-white hover-blue">New TV Tonight</a>
+                                                </h6>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 neon col-lg-2 col-md-2">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">The Magicians</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h5 class="mx-0 my-0 px-0 py-0 col-lg-2 col-md-2" style="text-indent: 0.2em; color:white; font-family: 'Roboto', sans-serif;">
+                                                    —
+                                                </h5>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">&nbsp;</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">Channel Zero</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 gold col-lg-2 col-md-2">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">74%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">Channel Zero</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 silver col-lg-2 col-md-2">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">74%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">Channel Zero</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 bronze col-lg-2 col-md-2">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">74%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">Channel Zero</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 black col-lg-2 col-md-2">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">74%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">Channel Zero</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 pt-3 pb-0 my-0">
+                                        <ul class="px-0 py-0" style="list-style-type: none;">
+                                            <li class="px-0 py-0">
+                                                <h6>
+                                                    <a href="tv.html" class="text-white text-uppercase hover-blue">Most Popular TV on Mude</a>
+                                                </h6>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 gold">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">Black Lightning</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 neon">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">The Magicians</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 gold">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">The Magicians</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 neon">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">The Magicians</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 gold">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">The Magicians</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 neon">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">The Magicians</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 gold">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">The Magicians</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 neon">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">The Magicians</a>
+                                            </li>
+                                            <li class="row px-0 py-0 mx-0 my-lg-2 my-1">
+                                                <h3 class="mx-0 my-0 px-0 py-0 gold">
+                                                    M
+                                                </h3>
+                                                <b class="my-auto col-lg-3 col-md-4 px-0">100%</b>
+                                                <a href="tv-series.html" class="my-auto text-white small hover-blue">The Magicians</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3 px-0 pt-3 pb-0 my-0 text-left">
+                                        <ul class="px-0 py-0" style="list-style-type: none;">
+                                            <li class="px-0 py-0">
+                                                <h6>
+                                                    <a class="text-white text-uppercase hover-none">More</a>
+                                                </h6>
+                                            </li>
+                                            <li class="px-0 py-0 mx-0 my-lg-3 my-2">
+                                                <a href="browse.html" class="text-white small hover-blue">Top Movies</a>
+                                            </li>
+                                            <li class="px-0 py-0 my-lg-3 my-2">
+                                                <a href="tv.html" class="text-white small hover-blue">Top Trailers</a>
+                                            </li>
+                                            <li class="mt-lg-5 mt-md-3 mt-2 px-0 py-0">
+                                                <h6>
+                                                    <a class="text-white text-uppercase hover-none">Episodic Reviews</a>
+                                                </h6>
+                                            </li>
+                                            <li class="px-0 py-0 my-lg-3 my-2">
+                                                <a href="tv-series.html" class="text-white small hover-blue">Homeland: Season 7</a>
+                                            </li>
+                                            <li class="px-0 py-0 my-lg-3 my-2">
+                                                <a href="tv-series.html" class="text-white small hover-blue">Riverdale: Season 2</a>
+                                            </li>
+                                            <li class="px-0 py-0 my-lg-3 my-2">
+                                                <a href="tv-series.html" class="text-white small hover-blue">Walking Dead: Season 2</a>
+                                            </li>
+                                            <li class="px-0 py-0 my-lg-3 my-2">
+                                                <a href="tv-series.html" class="text-white small hover-blue">Breaking Bad: Season 2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-2 pl-1 pt-3 pb-0 my-0 text-center">
+                                        <ul class="px-0 py-0" style="list-style-type: none;">
+                                            <li class="px-0 py-0">
+                                                <h6>Guaranteed Pick</h6>
+                                            </li>
+                                            <li class="px-0 py-0">
+                                                <div class="text-center mt-2">
+                                                    <a href="tv-season.html" style="text-decoration: none;">
+                                                        <div class="card hover-blue">
+                                                            <img class="card-img-top" src="images/tv1.png" alt="Dropdown img">
+                                                            <div class="card-body px-0 py-0">
+                                                                <h3 class="my-0 gold">M</h3>
+                                                                <h6 class="mx-0 my-0">Black Panther</h6>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-0 mt-5 mb-0 px-0 pb-5 d-none d-md-block">
+                        <a class="nav-link" href="critics.html">MUDE CRITICS</a>
+                    </li>
+                    <li class="nav-item mx-0 mr-0 mt-5 mb-0 px-0 pb-5 d-none d-md-block">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="collapse bg-black text-center" id="navbarSupportedContent">
+                <div class="row mx-0 my-0 px-0 py-0 signUp-label">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#signUpModalCenter">
+                        Sign Up
+                    </a>
+                </div>
+                <div class="row mx-0 my-0 px-0 py-0 signIn-label">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#logInModalCenter">
+                        Sign In
+                    </a>
+                </div>
+                <div class="row mx-0 my-0 px-0 py-0">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#meterModalCenter">
+                        What's the MudeMeter®?
+                    </a>
+                </div>
+                <div class="row mx-0 my-0 px-0 py-0">
+                    <a class="nav-link" href="browse.html">Movies & Dvds</a>
+                </div>
+                <div class="row mx-0 my-0 px-0 py-0">
+                    <a class="nav-link" href="tv.html">TV</a>
+                </div>
+                <div class="row mx-0 my-0 px-0 py-0">
+                    <a class="nav-link" href="critics.html">MUDE CRITICS</a>
+                </div>
+                <div class="row mx-0 my-0 px-0 py-0">
+                    <a class="nav-link" href="about.html">About</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mx-0 px-0 my-0 py-0">
+            <nav class="navbar navbar-expand bg-black mx-0 my-0 px-2 py-0 d-none d-md-block">
+                <ul class="navbar-nav mx-0 my-0 py-0">
+                    <li class="nav-item my-0 py-0 upper">
+                        <a class="nav-link my-0 py-0">
+                            <p class="mx-0 my-0 py-0 text-danger text-uppercase">Mude's Hot Trends</p>
+                        </a>
+                    </li>
+                    <li class="nav-item my-0 py-0 upper">
+                        <a class="nav-link my-0 py-0" href="tv-episode.html">
+                            <p class="my-0 py-0 text-white trending">Blank Panther</p>
+                        </a>
+                    </li>
+                    <li class="nav-item my-0 py-0 upper text-dark">
+                        <a class="nav-link my-0 py-0" href="tv-episode.html">
+                            <p class="my-0 py-0 text-white trending">Harry Potter</p>
+                        </a>
+                    </li>
+                    <li class="nav-item my-0 py-0 upper">
+                        <a class="nav-link my-0 py-0" href="tv-episode.html">
+                            <p class="my-0 py-0 text-white trending">The Outlaws</p>
+                        </a>
+                    </li>
+                    <li class="nav-item my-0 py-0 upper">
+                        <a class="nav-link my-0 py-0" href="tv-episode.html">
+                            <p class="my-0 py-0 text-white trending">City of God</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    
+    <section id="modal-section" class="d-none" th:fragment="header-modal">
+        <!-- MudeMeter Modal -->
+        <div class="modal fade" id="meterModalCenter" tabindex="-1" role="dialog" aria-labelledby="meterModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
+                <div class="modal-content" style="background-color: rgba(0,0,0,0.5) !important;">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="meterModalLongTitle">What is the MudeMeter®?</h5>
+                        <a href="#" class="hover-dark my-0 py-0 mx-0 my-auto" data-dismiss="modal" aria-label="Close">
+                            <p class="mx-0 my-0 px-0 py-0 text-danger-light">Close</p>
+                        </a>
+                    </div>
+                    <div class="modal-body border-0 text-center">
+                        The MudeMeter Score – based on the published opinions of hundreds of film and television critics – is a trusted measurement
+                        of movie and TV programming quality for millions of moviegoers. It represents the percentage of professional
+                        critic reviews that are positive for a given film or television show. We share same the Medal System
+                        for both critics and users. However the scale & the icon are different, 
+                        <b class="text-primary">M</b> for <b class="text-primary">crtics</b> and 
+                        <b class="text-danger-light">m</b> for <b class="text-danger-light">users</b>.
+                    </div>
+                    <div class="modal-body text-center border-0">
+                        <div class="mx-0 my-0 px-2 py-2">
+                            <div class="col-12 mx-0 my-0 px-0 py-0">
+                                <b class="text-danger-light d-sm-block d-none">GUARANTEED MUDE</b>
+                                <div class="row mx-0 mt-2 mb-0 px-0 py-0">
+                                    <h3 class="ml-auto neon">
+                                        M
+                                    </h3>
+                                    <h3 class="mr-auto neon" style="font-family: 'Blogger Sans Bold';">
+                                        m
+                                    </h3>
+                                </div>
+                                <p class="my-0 py-0">The MudeMeter is</p>
+                                <p>80% or higher.</p>
+                            </div>
+                        </div>
+                        <div class="row px-2 py-2">
+                            <div class="col-4 text-center">
+                                <b class="text-danger-light d-sm-block d-none">SILVER MUDE</b>
+                                <div class="row mx-0 mt-2 mb-0 px-0 py-0">
+                                    <h3 class="ml-auto silver">
+                                        M
+                                    </h3>
+                                    <h3 class="mr-auto silver" style="font-family: 'Blogger Sans Bold';">
+                                        m
+                                    </h3>
+                                </div>
+                                <p class="my-0 py-0">The MudeMeter is</p>
+                                <p>60% ~ 70%.</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <b class="text-danger-light d-sm-block d-none">GOLD MUDE</b>
+                                <div class="row mx-0 mt-2 mb-0 px-0 py-0">
+                                    <h3 class="ml-auto gold">
+                                        M
+                                    </h3>
+                                    <h3 class="mr-auto gold" style="font-family: 'Blogger Sans Bold';">
+                                        m
+                                    </h3>
+                                </div>
+                                <p class="my-0 py-0">The MudeMeter is</p>
+                                <p>70% or higher.</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <b class="text-danger-light d-sm-block d-none">BRONZE MUDE</b>
+                                <div class="row mx-0 mt-2 mb-0 px-0 py-0">
+                                    <h3 class="ml-auto bronze">
+                                        M
+                                    </h3>
+                                    <h3 class="mr-auto bronze" style="font-family: 'Blogger Sans Bold';">
+                                        m
+                                    </h3>
+                                </div>
+                                <p class="my-0 py-0">The MudeMeter is</p>
+                                <p> 50% ~ 60%.</p>
+                            </div>
+                        </div>
+                        <div class="row px-0 py-0">
+                            <div class="col-6 text-center">
+                                <b class="text-danger-light d-sm-block d-none">BURNT MUDE</b>
+                                <div class="row mx-0 mt-2 mb-0 px-0 py-0">
+                                    <h3 class="ml-auto black">
+                                        M
+                                    </h3>
+                                    <h3 class="mr-auto black" style="font-family: 'Blogger Sans Bold';">
+                                        m
+                                    </h3>
+                                </div>
+                                <p class="my-0 py-0">The MudeMeter is</p>
+                                <p>under 50%.</p>
+                            </div>
+                            <div class="col-6 text-center">
+                                <b class="text-danger-light d-sm-block d-none text-uppercase">Not Applicable</b>
+                                <h3 class="mt-2">
+                                    <h5 class="my-0 py-0" style="text-indent: 0.2em; color:white; font-family: 'Roboto', sans-serif;">
+                                        —
+                                    </h5>
+                                     &nbsp;
+                                </h3>
+                                <p class="my-0 py-0">The MudeMeter is</p>
+                                <p>not yet evaluated.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <div class="col text-right px-0">
+                            <a href="about.html" class="hover-blue mr-auto">Learn More ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Sign In Modal -->
+        <div class="modal fade" id="logInModalCenter" tabindex="-1" role="dialog" aria-labelledby="logInModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="dialog">
+                <div class="modal-content" style="background-color: rgba(0,0,0,0.5) !important;">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="logInModalLongTitle">Sign In</h5>
+                        <a href="#" class="hover-dark my-0 py-0 mx-0 my-auto" data-dismiss="modal" aria-label="Close">
+                            <p class="mx-0 my-0 px-0 py-0 text-danger-light">Close</p>
+                        </a>
+                    </div>
+                    <div class="modal-body text-uppercase border-0">
+                        <form>
+                            <div class="form-group">
+                                <label for="logInEmail">Email address</label>
+                                <input type="email" class="form-control" id="logInEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+                                <small id="emailHelp" class="form-text text-muted d-none">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="logInPassword">Password</label>
+                                <input type="password" class="form-control" id="logInPassword" placeholder="Password">
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-outline-light" href="#" data-dismiss="modal" id="signInButton">Sign In</a>
+                                <!-- <button type="submit" class="btn btn-outline-light" id="signInButton">Sign In</button> -->
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <div class="container">
+                            <div class="row">
+                                <a href="#" class="mx-auto text-danger-light hover-dark">
+                                    <b>Forgot password?</b>
+                                </a>
+                            </div>
+                            <div class="row my-0 py-0">
+                                <a class="mr-auto d-xl-none d-block">Don't have account?</a>
+                                <a href="#" class="text-danger-light hover-dark d-xl-none d-block" data-dismiss="modal" data-toggle="modal" data-target="#signUpModalCenter">
+                                    <b>Sign Up Here</b>
+                                </a>
+                            </div>
+                            <div class="row my-0 py-0">
+                                <a class="small mr-auto d-none d-xl-block">Don't have account?</a>
+                                <a href="#" class="text-danger-light small hover-dark d-none d-xl-block" data-dismiss="modal" data-toggle="modal" data-target="#signUpModalCenter">
+                                    <b>Sign Up Here</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- SignUp Modal -->
+        <div class="modal fade" id="signUpModalCenter" tabindex="-1" role="dialog" aria-labelledby="signUpModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="dialog">
+                <div class="modal-content" style="background-color: rgba(0,0,0,0.5) !important;">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="signUpModalLongTitle">Sign Up</h5>
+                        <a href="#" class="hover-dark my-0 py-0 mx-0 my-auto" data-dismiss="modal" aria-label="Close">
+                            <p class="mx-0 my-0 px-0 py-0 text-danger-light">Close</p>
+                        </a>
+                    </div>
+                    <div class="modal-body text-uppercase border-0">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="signUpFirst">First Name</label>
+                                    <input type="input" class="form-control" id="signUpFirst" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="signUpLast">Last Name</label>
+                                    <input type="password" class="form-control" id="signUpLast" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="signUpEmail">Email address</label>
+                                <input type="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp2" placeholder="Enter email">
+                                <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="singUpPassword">Password</label>
+                                <input type="password" class="form-control" id="singUpPassword" placeholder="Password">
+                            </div>
+                            <div class="text-center mt-3">
+                                <p class="text-white">
+                                    <small>By clicking "Sign up", I agree to the
+                                        <a href="#" class="text-danger-light hover-dark">Terms of Service</a> and
+                                        <a href="#" class="text-danger-light hover-dark">Privacy Policy</a>.</small>
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-light">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <a class="ml-auto">Already have account?</a>
+                        <a href="#" class="mr-auto text-danger-light hover-dark" data-dismiss="modal" data-toggle="modal" data-target="#logInModalCenter">
+                            <b>Log In here</b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Page Section -->
+    <section id="load-page-box" th:fragment="loader">
+        <div class="modal" style="background-color:black;" id="load-page">
+            <!-- Loading Page with Text -->
+            <div class="container-fluid mx-0 my-0 px-0 py-0" id="load-page-text">
+                <div class="row mx-0 my-0 px-0 py-0" style="height: 100vh;">
+                    <div class="mx-auto my-auto">
+                        <img src="images/logo.png" style="margin-left: 15%; width: 70%;">
+                    </div>
+                </div>
+            </div>
+            <!-- Loading Page with Bounces -->
+            <div class="container-fluid mx-0 my-0 px-0 py-0" id="load-page-bounce">
+                <div class="row mx-0 my-0 px-0 py-0" style="height: 100vh; display:none;">
+                    <div class="mx-auto my-auto spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                        <div class="bounce4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="d-none">
+        <div class="container-fluid px-0 py-0 mt-md-0 mt-sm-5 mt-5 bg-dark">
+            <div class="mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+                <div class="row mx-0 my-0 px-0 py-0 bg-danger header-label">
+                    <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+                    <h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+                        Our Guaranteed Picks
+                        <i class="fas fa-question-circle question-icon d-none d-md-inline-block" data-toggle="tooltip" data-placement="right" title="Movies and 
+                                    TV shows are Guaranteed Picks with a steady MudeMeter of 75% or higher from Top Critics."></i>
+                    </h4>
+                </div>
+            </div>
+            <div class="main owl-carousel owl-theme mx-0 mt-3 mb-0 px-0 pt-3 pb-0 bg-black" style="z-index:0;">
+                <div class="item">
+                    <a class="mx-0 my-0 px-0 py-0 hover-blue" href="movies-detail.html">
+                        <div class="card px-0 py-0 mx-0 my-0">
+                            <img class="card-img-top rounded-0" src="images/tv1.jpg" alt="Card image cap" style="width:300px;">
+                            <div class="card-img-overlay mt-1">
+                                <h6 class="card-title mt-5 py-0">Black Panther</h6>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text text-uppercase ml-0 mr-1 mt-1 py-0 text-white">
+                                        3 HR 5 MIN
+                                    </p>
+                                    <p class="card-text text-uppercase mx-1 mt-1 py-0 text-muted">
+                                        |
+                                    </p>
+                                    <p class="card-text text-uppercase ml-1 mr-0 mt-1 py-0 text-white">
+                                        PG13
+                                    </p>
+                                </div>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text ml-0 mr-1 mt-1 py-0 text-white">
+                                        Released
+                                    </p>
+                                    <p class="card-text ml-1 mr-0 mt-1 py-0 text-white">
+                                        March 23
+                                    </p>
+                                </div>
+                                <p class="card-text py-0 text-white">
+                                    After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king.
+                                </p>
+                                <p class="card-text py-0 mt-4">
+                                    <h6>
+                                        <span class="badge badge-danger pl-2 pr-1 py-2">In Theaters</span>
+                                    </h6>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="mx-0 my-0 px-0 py-0 hover-blue" href="movies-detail.html">
+                        <div class="card px-0 py-0 mx-0 my-0">
+                            <img class="card-img-top rounded-0" src="images/tv2.jpg" alt="Card image cap" style="width:300px;">
+                            <div class="card-img-overlay mt-1">
+                                <h6 class="card-title mt-5 py-0">Black Panther</h6>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text text-uppercase ml-0 mr-1 mt-1 py-0 text-white">
+                                        3 HR 5 MIN
+                                    </p>
+                                    <p class="card-text text-uppercase mx-1 mt-1 py-0 text-muted">
+                                        |
+                                    </p>
+                                    <p class="card-text text-uppercase ml-1 mr-0 mt-1 py-0 text-white">
+                                        PG13
+                                    </p>
+                                </div>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text ml-0 mr-1 mt-1 py-0 text-white">
+                                        Released
+                                    </p>
+                                    <p class="card-text ml-1 mr-0 mt-1 py-0 text-white">
+                                        March 23
+                                    </p>
+                                </div>
+                                <p class="card-text py-0 text-white">
+                                    After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king.
+                                </p>
+                                <p class="card-text py-0 mt-4">
+                                    <h6>
+                                        <span class="badge badge-danger pl-2 pr-1 py-2">In Theaters</span>
+                                    </h6>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="mx-0 my-0 px-0 py-0 hover-blue" href="movies-detail.html">
+                        <div class="card px-0 py-0 mx-0 my-0">
+                            <img class="card-img-top rounded-0" src="images/tv3.jpg" alt="Card image cap" style="width:300px;">
+                            <div class="card-img-overlay mt-1">
+                                <h6 class="card-title mt-5 py-0">Black Panther</h6>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text text-uppercase ml-0 mr-1 mt-1 py-0 text-white">
+                                        3 HR 5 MIN
+                                    </p>
+                                    <p class="card-text text-uppercase mx-1 mt-1 py-0 text-muted">
+                                        |
+                                    </p>
+                                    <p class="card-text text-uppercase ml-1 mr-0 mt-1 py-0 text-white">
+                                        PG13
+                                    </p>
+                                </div>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text ml-0 mr-1 mt-1 py-0 text-white">
+                                        Released
+                                    </p>
+                                    <p class="card-text ml-1 mr-0 mt-1 py-0 text-white">
+                                        March 23
+                                    </p>
+                                </div>
+                                <p class="card-text py-0 text-white">
+                                    After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king.
+                                </p>
+                                <p class="card-text py-0 mt-4">
+                                    <h6>
+                                        <span class="badge badge-danger pl-2 pr-1 py-2">In Theaters</span>
+                                    </h6>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <div class="card px-0 py-5 mx-0 my-0 text-center" style="width:300px;">
+                        <h5>Not Finding what you're looking for?</h5>
+                        <div class="mx-0 my-0 px-0 py-0">
+                            <a href="browse.html" class="btn btn-outline-light rounded mx-auto mt-5 mb-0 px-5 text-uppercase" id="guaranteedButton">See All Guaranteed</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="mx-0 my-0 px-0 py-0 hover-blue" href="movies-detail.html">
+                        <div class="card px-0 py-0 mx-0 my-0">
+                            <img class="card-img-top  rounded-0" src="images/tv4.jpg" alt="Card image cap" style="width:300px;">
+                            <div class="card-img-overlay mt-1">
+                                <h6 class="card-title mt-5 py-0">Black Panther</h6>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text text-uppercase ml-0 mr-1 mt-1 py-0 text-white">
+                                        3 HR 5 MIN
+                                    </p>
+                                    <p class="card-text text-uppercase mx-1 mt-1 py-0 text-muted">
+                                        |
+                                    </p>
+                                    <p class="card-text text-uppercase ml-1 mr-0 mt-1 py-0 text-white">
+                                        PG13
+                                    </p>
+                                </div>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text ml-0 mr-1 mt-1 py-0 text-white">
+                                        Released
+                                    </p>
+                                    <p class="card-text ml-1 mr-0 mt-1 py-0 text-white">
+                                        March 23
+                                    </p>
+                                </div>
+                                <p class="card-text py-0 text-white">
+                                    After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king.
+                                </p>
+                                <p class="card-text py-0 mt-4">
+                                    <h6>
+                                        <span class="badge badge-danger pl-2 pr-1 py-2">In Theaters</span>
+                                    </h6>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="mx-0 my-0 px-0 py-0 hover-blue" href="movies-detail.html">
+                        <div class="card px-0 py-0 mx-0 my-0">
+                            <img class="card-img-top rounded-0" src="images/tv5.jpg" alt="Card image cap" style="width:300px;">
+                            <div class="card-img-overlay mt-1">
+                                <h6 class="card-title mt-5 py-0">Black Panther</h6>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text text-uppercase ml-0 mr-1 mt-1 py-0 text-white">
+                                        3 HR 5 MIN
+                                    </p>
+                                    <p class="card-text text-uppercase mx-1 mt-1 py-0 text-muted">
+                                        |
+                                    </p>
+                                    <p class="card-text text-uppercase ml-1 mr-0 mt-1 py-0 text-white">
+                                        PG13
+                                    </p>
+                                </div>
+                                <div class="row mx-0 my-0 px-0 py-0">
+                                    <p class="card-text ml-0 mr-1 mt-1 py-0 text-white">
+                                        Released
+                                    </p>
+                                    <p class="card-text ml-1 mr-0 mt-1 py-0 text-white">
+                                        March 23
+                                    </p>
+                                </div>
+                                <p class="card-text py-0 text-white">
+                                    After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king.
+                                </p>
+                                <p class="card-text py-0 mt-4">
+                                    <h6>
+                                        <span class="badge badge-danger pl-2 pr-1 py-2">In Theaters</span>
+                                    </h6>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <section class="d-none">
+        <div class="container-fluid mx-0 my-0 px-0 pt-4 pb-0 bg-dark">
+            <div class="mx-0 my-0 px-0 py-0 bg-dark">
+                <div class="row mx-0 my-0 px-0 py-0 bg-danger header-label">
+                    <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+                    <h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+                        Top Chart
+                    </h4>
+                </div>
+            </div>
+            <div class="row mt-5 ml-1 mr-1">
+                <div class="col-lg-4 col-md-6 mb-md-3 mb-sm-4 mb-4">
+                    <div class="row py-0">
+                        <h6 class="mx-auto">Movies Opening this week</h6>
+                    </div>
+                    <div class="row pb-1">
+                        <a href="tickets-showtime.html" class="ml-auto mr-3 text-danger text-uppercase hover-red d-none"><b>Get Tickets ></b></a>
+                    </div>
+                    <div class="mx-3 px-0 py-0">
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom border-top hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 neon">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Annihilation
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Feb 25
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 neon">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Black Panther
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Feb 16
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Game Night
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Feb 23
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Every Day
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Feb 23
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center text-truncate">
+                                    The Greatest Showman
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Jan 16
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col text-right px-0">
+                        <a href="tickets-showtime.html" class="animated">
+                            <div class="infoText-container">
+                                View All
+                                <b class="infoText">></b>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-md-3 mb-sm-4 mb-4">
+                    <div class="row py-0">
+                        <h6 class="mx-auto">Top Box Office</h6>
+                    </div>
+                    <div class="row pb-1">
+                        <a href="tickets-showtime.html" class="ml-auto mr-3 text-danger text-uppercase hover-red d-none"><b>Get Tickets ></b></a>
+                    </div>
+                    <div class="mx-3 px-0 py-0">
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom border-top hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Black Panther
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    $201.8M
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 silver">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Peter Rabbit
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    $17.6M
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 bronze">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Fifty Shades Freed
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    $17.4M
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 bronze">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center text-truncate">
+                                    Jumanji: Welcome to the Jungle
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    $8M
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 black">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    The 15:17 to Paris
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    $7.7M
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col text-right px-0">
+                        <a href="browse.html" class="mr-auto hover-blue">View All ></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-md-3 mb-sm-4 mb-4">
+                    <div class="row py-0">
+                        <h6 class="mx-auto">Coming Soon to theaters</h6>
+                    </div>
+                    <div class="row pb-1">
+                        <a href="tickets-showtime.html" class="ml-auto mr-3 text-danger text-uppercase hover-red d-none"><b>Get Tickets ></b></a>
+                    </div>
+                    <div class="mx-3 px-0 py-0">
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom border-top hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Death Wish
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Mar 2
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 silver">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Thor: Ragnarok
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Mar 5
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 bronze">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Divorce
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Mar 3
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 bronze">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Black Panther
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Feb 16
+                                </div>
+                            </div>
+                        </a>
+                        <a href="movies-detail.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-6 px-0 py-0 text-center">
+                                    Victoria
+                                </div>
+                                <div class="col-3 px-0 py-0 text-right">
+                                    Mar 2
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col text-right px-0">
+                        <a href="browse.html" class="mr-auto hover-blue">View All ></a>
+                    </div>
+                </div>
+                <!-- Visible Only On MD -->
+                <div class="col-lg-4 col-md-6 mb-md-3 d-none d-md-block d-lg-none">
+                    <div class="row pt-0 pb-1">
+                        <h6 class="mx-auto">New TV tonight</h6>
+                    </div>
+                    <div class="mx-3 px-0 py-0">
+                        <a href="tv-season.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom border-top hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Red Sparrow
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-season.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 hover-table">
+                                <div class="col-1 px-0 py-0 text-left">
+                                    <h5 class="my-0 py-0" style="text-indent: 0.2em; color:white; font-family: 'Roboto', sans-serif;">
+                                        —
+                                    </h5>
+                                </div>
+                                <div class="col-2 px-0 py-0 text-left">
+                                    <h3 class="my-0 py-0">
+                                        &nbsp;
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Death Wish
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col text-right px-0">
+                        <a href="browse.html" class="mr-auto hover-blue">View All ></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-lg-5 mx-1">
+                <!-- Hidden on MD -->
+                <div class="col-lg-4 col-md-6 d-lg-block d-md-none d-sm-block mb-sm-4 mb-4">
+                    <div class="row py-0">
+                        <h6 class="mx-auto">New TV tonight</h6>
+                    </div>
+                    <div class="row pb-1">
+                        <a class="ml-auto mr-3 text-danger text-uppercase small">&nbsp;</a>
+                    </div>
+                    <div class="mx-3 px-0 py-0">
+                        <a href="tv-season.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom border-top hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Red Sparrow
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-season.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 hover-table">
+                                <div class="col-1 px-0 py-0 text-left">
+                                    <h5 class="my-0 py-0" style="text-indent: 0.2em; color:white; font-family: 'Roboto', sans-serif;">
+                                        —
+                                    </h5>
+                                </div>
+                                <div class="col-2 px-0 py-0 text-left">
+                                    <h3 class="my-0 py-0">
+                                        &nbsp;
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Death Wish
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col text-right px-0">
+                        <a href="browse.html" class="mr-auto hover-blue">View All ></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-sm-4 mb-4">
+                    <div class="row py-0">
+                        <h6 class="mx-auto">Most popular TV tonight</h6>
+                    </div>
+                    <div class="row pb-1">
+                        <a class="ml-auto mr-3 text-danger text-uppercase small">&nbsp;</a>
+                    </div>
+                    <div class="mx-3 px-0 py-0">
+                        <a href="tv-season.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom border-top hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 silver">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Counter Part
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-season.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    The Post
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-season.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 bronze">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Gnome Alone
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-season.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 silver">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Goldstone
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-season.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 black">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Foxtrot
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col text-right px-0">
+                        <a href="browse.html" class="mr-auto hover-blue">View All ></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="row py-0">
+                        <h6 class="mx-auto">TOP DVD & STREAMING MOVIES</h6>
+                    </div>
+                    <div class="row mx-0 my-0 px-0 pb-0">
+                        <div class="col-3 mx-0 my-0 px-0 py-0 text-center">
+                            <a href="browse.html" class="text-white small hover-blue">FandangoNOW</a>
+                        </div>
+                        <div class="col-3 mx-0 my-0 px-0 py-0 text-center">
+                            <a href="browse.html" class="text-white small hover-blue">Netflix</a>
+                        </div>
+                        <div class="col-2 mx-0 my-0 px-0 py-0 text-center">
+                            <a href="browse.html" class="text-white small hover-blue">iTunes</a>
+                        </div>
+                        <div class="col-2 mx-0 my-0 px-0 py-0 text-center">
+                            <a href="browse.html" class="text-white small hover-blue">Amazon</a>
+                        </div>
+                        <div class="col-2 mx-0 my-0 px-0 py-0 text-center">
+                            <a href="browse.html" class="text-white small hover-blue">More...</a>
+                        </div>
+                    </div>
+                    <div class="mx-3 px-0 py-0">
+                        <a href="tv-episode.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom border-top hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 gold">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Daddy's Home 2 
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-episode.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-1 px-0 py-0 text-left">
+                                    <h5 class="my-0 py-0" style="text-indent: 0.2em; color:white; font-family: 'Roboto', sans-serif;">
+                                        —
+                                    </h5>
+                                </div>
+                                <div class="col-2 px-0 py-0 text-left">
+                                    <h3 class="my-0 py-0">
+                                        &nbsp;
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    The Florida Project
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-episode.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-1 px-0 py-0 text-left">
+                                    <h5 class="my-0 py-0" style="text-indent: 0.2em; color:white; font-family: 'Roboto', sans-serif;">
+                                        —
+                                    </h5>
+                                </div>
+                                <div class="col-2 px-0 py-0 text-left">
+                                    <h3 class="my-0 py-0">
+                                        &nbsp;
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Counterpart
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-episode.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 border-white border-bottom hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 bronze">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center text-truncate">
+                                    The Man Who Invented The Time Machine
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tv-episode.html" style="text-decoration: none;">
+                            <div class="row my-0 pt-1 hover-table">
+                                <div class="col-3 px-0 py-0 text-left">
+                                    <h3 class="my-0 black">
+                                        M
+                                    </h3>
+                                </div>
+                                <div class="col-9 px-0 py-0 text-center">
+                                    Black Panther
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col text-right px-0">
+                        <a href="browse.html" class="mr-auto hover-blue">View All ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="d-none">
+        <div class="container-fluid mx-0 my-0 px-0 py-0 bg-dark">
+            <div class="mx-0 my-0 px-0 pt-2 pb-0 bg-dark">
+                <div class="row mx-0 my-0 px-0 py-0 bg-danger header-label">
+                    <div class="mx-0 my-0 px-0 py-0 bg-danger header-label-left" style="width:2%;"></div>
+                    <h4 class="mx-0 my-0 px-2 py-0 text-uppercase bg-dark">
+                        Trailers & Videos
+                    </h4>
+                </div>
+            </div>
+            <div class="row mt-5 ml-1 mr-1 px-md-0 px-sm-3">
+                <div class="col-lg-4 col-md-6 mb-md-3 mb-sm-4 mb-4 px-md-2 px-sm-3">
+                    <a class="mx-0 my-0 px-0 py-0 hover-none trailer-box" href="https://www.youtube.com/">
+                        <div class="card">
+                            <img class="card-img-top" src="images/tr2.png" alt="Card image cap">
+                            <div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+                                <div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-inline-block d-sm-none d-inline-block">Easter Egg</span>
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-none d-sm-inline-block d-none" style="font-size:1.2rem;">Easter Egg</span>
+                                    <i class="fas fa-play fa-7x ml-auto mt-auto px-3 py-3 d-md-block d-sm-none d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-10x ml-auto mt-auto px-3 py-3 d-md-none d-sm-block d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-5x ml-auto mt-auto px-3 py-3 d-sm-none d-block" style="opacity:0.7;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-block d-none">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Mission: Impossible - Fallout</em>
+                                <br /> Is Tom Cruise's helicopter stunt his craziest yet?
+                            </p>
+                        </div>
+                        <!-- Visible Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-none d-sm-block d-block bg-black">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Mission: Impossible - Fallout</em>
+                                <br /> Is Tom Cruise's helicopter stunt his craziest yet?
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-md-3 mb-sm-4 mb-4 px-md-2 px-sm-3">
+                    <a class="mx-0 my-0 px-0 py-0 hover-none trailer-box" href="https://www.youtube.com/">
+                        <div class="card">
+                            <img class="card-img-top" src="images/tr1.png" alt="Card image cap">
+                            <div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+                                <div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-inline-block d-sm-none d-inline-block">Trailer</span>
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-none d-sm-inline-block d-none" style="font-size:1.2rem;">Trailer</span>
+                                    <i class="fas fa-play fa-7x ml-auto mt-auto px-3 py-3 d-md-block d-sm-none d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-10x ml-auto mt-auto px-3 py-3 d-md-none d-sm-block d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-5x ml-auto mt-auto px-3 py-3 d-sm-none d-block" style="opacity:0.7;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-block d-none">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Deadpool 2</em>
+                                <br /> The big reveal of Cable; creator Rob Liefeld reacts
+                            </p>
+                        </div>
+                        <!-- Visible Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-none d-sm-block d-block bg-black">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Deadpool 2</em>
+                                <br /> The big reveal of Cable; creator Rob Liefeld reacts
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-md-3 mb-sm-4 mb-4 px-md-2 px-sm-3">
+                    <a class="mx-0 my-0 px-0 py-0 hover-none trailer-box" href="https://www.youtube.com/">
+                        <div class="card">
+                            <img class="card-img-top" src="images/tr4.png" alt="Card image cap">
+                            <div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+                                <div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-inline-block d-sm-none d-inline-block">Trailer</span>
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-none d-sm-inline-block d-none" style="font-size:1.2rem;">Trailer</span>
+                                    <i class="fas fa-play fa-7x ml-auto mt-auto px-3 py-3 d-md-block d-sm-none d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-10x ml-auto mt-auto px-3 py-3 d-md-none d-sm-block d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-5x ml-auto mt-auto px-3 py-3 d-sm-none d-block" style="opacity:0.7;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-block d-none">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Jurassic World</em>
+                                <br /> The internet reacts to the Tom Hardy teaser
+                            </p>
+                        </div>
+                        <!-- Visible Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-none d-sm-block d-block bg-black">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Jurassic World</em>
+                                <br /> The internet reacts to the Tom Hardy teaser
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Only Visible on MD -->
+                <div class="col-lg-4 col-md-6 mb-md-3 d-none px-md-2 d-md-block d-lg-none">
+                    <div class="mx-0 my-0 px-0 py-0 text-center">
+                        <a class="mx-0 my-0 px-0 py-0">
+                            <img id="ad5" src="images/ad-3.png" style="width:70%;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-lg-5 ml-1 mr-1 px-md-0 px-sm-3">
+                <!-- Hidden on MD -->
+                <div class="col-lg-4 col-md-6 d-lg-block d-md-none d-sm-block mb-sm-4 mb-4 px-md-2 px-sm-5">
+                    <div class="mx-0 my-0 px-md-0 px-sm-3 py-0 text-center">
+                        <div class="mx-0 my-4 px-md-0 px-sm-5 py-0 text-center">
+                            <a class="mx-0 my-0 px-0 py-0">
+                                <img id="ad3" src="images/ad-3.png" style="width:70%;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-sm-4 mb-4 px-md-2 px-sm-3">
+                    <a class="mx-0 my-0 px-0 py-0 hover-none trailer-box" href="https://www.youtube.com/">
+                        <div class="card">
+                            <img class="card-img-top" src="images/tr2.png" alt="Card image cap">
+                            <div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+                                <div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-inline-block d-sm-none d-inline-block">Trailer</span>
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-none d-sm-inline-block d-none" style="font-size:1.2rem;">Trailer</span>
+                                    <i class="fas fa-play fa-7x ml-auto mt-auto px-3 py-3 d-md-block d-sm-none d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-10x ml-auto mt-auto px-3 py-3 d-md-none d-sm-block d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-5x ml-auto mt-auto px-3 py-3 d-sm-none d-block" style="opacity:0.7;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-block d-none">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Deadpool 2</em>
+                                <br /> Unless the context is clear (as with the “Notifications” example,
+                            </p>
+                        </div>
+                        <!-- Visible Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-none d-sm-block d-block bg-black">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Deadpool 2</em>
+                                <br /> Unless the context is clear (as with the “Notifications” example,
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-sm-4 mb-4 px-md-2 px-sm-3">
+                    <a class="mx-0 my-0 px-0 py-0 hover-none trailer-box" href="https://www.youtube.com/">
+                        <div class="card">
+                            <img class="card-img-top" src="images/tr3.png" alt="Card image cap">
+                            <div class="card-img-overlay text-right mx-0 my-0 px-0 py-0">
+                                <div class="row mx-0 my-0 px-0 py-0 h-100 w-100">
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-inline-block d-sm-none d-inline-block">Trailer</span>
+                                    <span class="badge badge-danger rounded-0 py-2 mr-auto mt-auto text-uppercase d-md-none d-sm-inline-block d-none" style="font-size:1.2rem;">Trailer</span>
+                                    <i class="fas fa-play fa-7x ml-auto mt-auto px-3 py-3 d-md-block d-sm-none d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-10x ml-auto mt-auto px-3 py-3 d-md-none d-sm-block d-none" style="opacity:0.7;"></i>
+                                    <i class="fas fa-play fa-5x ml-auto mt-auto px-3 py-3 d-sm-none d-block" style="opacity:0.7;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-block d-none">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Venom</em>
+                                <br /> A raptor stalks a family bedroom and more in this new look
+                            </p>
+                        </div>
+                        <!-- Visible Under MD -->
+                        <div class="mx-0 my-0 px-0 py-0 d-md-none d-sm-block d-block bg-black">
+                            <p class="card-text text-light text-uppercase mx-0 my-0 px-2 py-2">
+                                <em>Venom</em>
+                                <br /> A raptor stalks a family bedroom and more in this new look
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col text-right px-0 mt-2 pb-1">
+                <a href="browse.html" class="mr-3 hover-blue">View All Videos ></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="d-none" th:fragment="footer">
+        <div class="container-fluid">
+            <div class="px-0 py-3 bg-black">
+                <div class="text-center">
+                    <a class="mx-0 my-0 px-0 py-0">
+                        <img class="img-fluid" id="ad4" src="images/ad-1.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-black">
+            <div class="row bg-dark pt-2 pb-0">
+                <div class="col-md-4 text-center text-md-left mt-md-2 pt-md-1">
+                    <p class="text-light text-muted">Copyright &copy; MUDE. All rights reserved.</p>
+                </div>
+                <div class="col-md-4 navbar-brand text-center mt-md-2 pt-md-1 mx-auto">
+                    Mude
+                </div>
+                <div class="col-md-4 text-center text-md-right mt-md-2 pt-md-1 mb-sm-2 mb-2">
+                    <a href="about.html" class="mr-2 hover-blue">Help</a>
+                    <a href="about.html" class=" hover-blue">About</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="jquery/jquery-3.3.1.min.js"></script>  
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
